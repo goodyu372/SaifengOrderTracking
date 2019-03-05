@@ -1,0 +1,31 @@
+﻿1>------ 已启动全部重新生成: 项目: SFOrderTracking, 配置: Release Any CPU ------
+1>D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(2110,5): warning MSB3274: 未能解析主引用“BarcodeDLL”，因为它是针对“.NETFramework,Version=v4.5.1”框架生成的。该框架版本高于当前目标框架“.NETFramework,Version=v4.5”。
+1>vbc : warning BC40057: 项目级 Imports“BarcodeDLL”中指定的命名空间或类型不包含任何公共成员，或者找不到公共成员。要确保定义了该命名空间或类型且其中至少包含一个公共成员；还要确保导入的元素名不使用任何别名。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form输入生产单.vb(17,24): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form按客户订单号查询生产单.vb(70,28): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form按生产单号查询未完成零件状况.vb(71,28): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form按客户查询未完成零件状况.vb(67,28): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form按图号查询未完成零件.vb(67,28): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form修改供应商.vb(274,42): warning BC42104: 变量“DWGInfo”在赋值前被使用。可能会在运行时导致 null 引用异常。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form修改供应商.vb(275,42): warning BC42104: 变量“CustDWG”在赋值前被使用。可能会在运行时导致 null 引用异常。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form修改供应商.vb(276,43): warning BC42104: 变量“ProcCode”在赋值前被使用。可能会在运行时导致 null 引用异常。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form修改供应商.vb(282,53): warning BC42104: 变量“GYS”在赋值前被使用。可能会在运行时导致 null 引用异常。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单查询.vb(151,28): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form嘉睦订单查询.vb(22,17): warning BC42104: 变量“SQLstring”在赋值前被使用。可能会在运行时导致 null 引用异常。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form嘉睦零件库存管理.vb(94,13): warning BC42024: 未使用的局部变量:“ID”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form按客户代码及图号输入价格.vb(33,24): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form补充出货价格.vb(33,24): warning BC42024: 未使用的局部变量:“CNString”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单出货记录.vb(114,28): warning BC42024: 未使用的局部变量:“SQLOutput”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单出货记录.vb(115,17): warning BC42024: 未使用的局部变量:“ID”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单出货记录.vb(169,28): warning BC42024: 未使用的局部变量:“SQLOutput”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单出货记录.vb(170,17): warning BC42024: 未使用的局部变量:“ID”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单出货记录.vb(211,28): warning BC42024: 未使用的局部变量:“SQLOutput”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form订单出货记录.vb(212,17): warning BC42024: 未使用的局部变量:“ID”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form客户退货输入.vb(114,28): warning BC42024: 未使用的局部变量:“SQLOutput”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form客户退货输入.vb(115,17): warning BC42024: 未使用的局部变量:“ID”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form客户退货输入.vb(169,28): warning BC42024: 未使用的局部变量:“SQLOutput”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form客户退货输入.vb(170,17): warning BC42024: 未使用的局部变量:“ID”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form客户退货输入.vb(211,28): warning BC42024: 未使用的局部变量:“SQLOutput”。
+1>E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\Form客户退货输入.vb(212,17): warning BC42024: 未使用的局部变量:“ID”。
+1>  SFOrderTracking -> E:\PTS源代码\20181220\SaifengOrderTracking\SaifengOrderTracking\bin\Release\SaifengOrderTracking.exe
+========== 全部重新生成: 成功 1 个，失败 0 个，跳过 0 个 ==========

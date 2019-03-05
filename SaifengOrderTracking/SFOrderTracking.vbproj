@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{586DD3CA-480D-4C03-9916-AA9DE7BC6BCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>SaifengOrderTracking</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\sf\【可执行文件共享】\赛峰ERP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SaifengOrderTracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SaifengOrderTracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>crashdump.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7DFDC28760C48B00A685269F35DAA03CFF153F68</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SFOrderTracking_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\3rdDLL\ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeDLL">
+      <HintPath>..\3rdDLL\BarcodeDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Acrobat">
+      <HintPath>..\3rdDLL\Interop.Acrobat.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.AdobePDFMakerForOffice">
+      <HintPath>..\3rdDLL\Interop.AdobePDFMakerForOffice.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.ADOX, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\3rdDLL\Interop.ADOX.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BARCODELib">
+      <HintPath>..\3rdDLL\Interop.BARCODELib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSComctlLib">
+      <HintPath>..\3rdDLL\Interop.MSComctlLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSDAOSP">
+      <HintPath>..\3rdDLL\Interop.MSDAOSP.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\3rdDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\3rdDLL\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\3rdDLL\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ADODB" />
+    <Import Include="ADOX" />
+    <Import Include="BarcodeDLL" />
+    <Import Include="BARCODELib" />
+    <Import Include="Microsoft" />
+    <Import Include="Microsoft.Office" />
+    <Import Include="Microsoft.Office.Core" />
+    <Import Include="Microsoft.Office.Interop" />
+    <Import Include="Microsoft.Office.Interop.Excel" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.OleDb" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form查询价格.Designer.vb">
+      <DependentUpon>Form查询价格.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询价格.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form主窗体.Designer.vb">
+      <DependentUpon>Form主窗体.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form主窗体.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form图纸信息工艺卡.Designer.vb">
+      <DependentUpon>Form图纸信息工艺卡.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form图纸信息工艺卡.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form工艺编写.Designer.vb">
+      <DependentUpon>Form工艺编写.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form工艺编写.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form输入生产单.Designer.vb">
+      <DependentUpon>Form输入生产单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form输入生产单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form取消生产单.Designer.vb">
+      <DependentUpon>Form取消生产单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form取消生产单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form订单入库.Designer.vb">
+      <DependentUpon>Form订单入库.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form订单入库.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPMC图纸记录.Designer.vb">
+      <DependentUpon>FormPMC图纸记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPMC图纸记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按生产单号查询未完成零件状况.Designer.vb">
+      <DependentUpon>Form按生产单号查询未完成零件状况.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按生产单号查询未完成零件状况.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按客户查询未完成零件状况.Designer.vb">
+      <DependentUpon>Form按客户查询未完成零件状况.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按客户查询未完成零件状况.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按图号查询未完成零件.Designer.vb">
+      <DependentUpon>Form按图号查询未完成零件.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按图号查询未完成零件.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form未分发及未收回图纸查询.Designer.vb">
+      <DependentUpon>Form未分发及未收回图纸查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form未分发及未收回图纸查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form工艺流程卡处理.Designer.vb">
+      <DependentUpon>Form工艺流程卡处理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form工艺流程卡处理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form用户查询.Designer.vb">
+      <DependentUpon>Form用户查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form用户查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form增加用户.Designer.vb">
+      <DependentUpon>Form增加用户.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form增加用户.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form客户信息查询及维护.Designer.vb">
+      <DependentUpon>Form客户信息查询及维护.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form客户信息查询及维护.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form员工信息维护.Designer.vb">
+      <DependentUpon>Form员工信息维护.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form员工信息维护.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form外发记录.Designer.vb">
+      <DependentUpon>Form外发记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form外发记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form外发收回记录.Designer.vb">
+      <DependentUpon>Form外发收回记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form外发收回记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form外发记录查询.Designer.vb">
+      <DependentUpon>Form外发记录查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form外发记录查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form更改图号.Designer.vb">
+      <DependentUpon>Form更改图号.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form更改图号.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form取消工艺.Designer.vb">
+      <DependentUpon>Form取消工艺.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form取消工艺.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form所有未完成生产单.Designer.vb">
+      <DependentUpon>Form所有未完成生产单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form所有未完成生产单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form用户登录.Designer.vb">
+      <DependentUpon>Form用户登录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form用户登录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form增加供应商.Designer.vb">
+      <DependentUpon>Form增加供应商.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form增加供应商.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form品质部终检记录.Designer.vb">
+      <DependentUpon>Form品质部终检记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form品质部终检记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按单号图号录入终检记录.Designer.vb">
+      <DependentUpon>Form按单号图号录入终检记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按单号图号录入终检记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form查询终检记录.Designer.vb">
+      <DependentUpon>Form查询终检记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询终检记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form查询所有终检记录.Designer.vb">
+      <DependentUpon>Form查询所有终检记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询所有终检记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form工艺修改.Designer.vb">
+      <DependentUpon>Form工艺修改.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form工艺修改.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form下料完成记录.Designer.vb">
+      <DependentUpon>Form下料完成记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form下料完成记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form放入图档 PDFJPG.Designer.vb">
+      <DependentUpon>Form放入图档 PDFJPG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form放入图档 PDFJPG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form修改供应商.Designer.vb">
+      <DependentUpon>Form修改供应商.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form修改供应商.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form更新价格.Designer.vb">
+      <DependentUpon>Form更新价格.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form更新价格.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form订单查询.Designer.vb">
+      <DependentUpon>Form订单查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form订单查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form查询订单信息.Designer.vb">
+      <DependentUpon>Form查询订单信息.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询订单信息.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form返工记录.Designer.vb">
+      <DependentUpon>Form返工记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form返工记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form返工收回.Designer.vb">
+      <DependentUpon>Form返工收回.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form返工收回.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form查询返工记录.Designer.vb">
+      <DependentUpon>Form查询返工记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询返工记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form工序个人工时查询.Designer.vb">
+      <DependentUpon>Form工序个人工时查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form工序个人工时查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件交期信息查询.Designer.vb">
+      <DependentUpon>Form嘉睦零件交期信息查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件交期信息查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件最新信息查询.Designer.vb">
+      <DependentUpon>Form嘉睦零件最新信息查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件最新信息查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件生产状态查询.Designer.vb">
+      <DependentUpon>Form嘉睦零件生产状态查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件生产状态查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件未完成订单信息.Designer.vb">
+      <DependentUpon>Form嘉睦零件未完成订单信息.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件未完成订单信息.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form订单出货记录.Designer.vb">
+      <DependentUpon>Form订单出货记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form订单出货记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form主管工序扫描.Designer.vb">
+      <DependentUpon>Form主管工序扫描.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form主管工序扫描.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form出货查询.Designer.vb">
+      <DependentUpon>Form出货查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form出货查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form补入订单价格.Designer.vb">
+      <DependentUpon>Form补入订单价格.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form补入订单价格.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦订单录入.Designer.vb">
+      <DependentUpon>Form嘉睦订单录入.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦订单录入.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦出货记录.Designer.vb">
+      <DependentUpon>Form嘉睦出货记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦出货记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦订单查询.Designer.vb">
+      <DependentUpon>Form嘉睦订单查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦订单查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦订单特别显示.Designer.vb">
+      <DependentUpon>Form嘉睦订单特别显示.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦订单特别显示.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件库存删除.Designer.vb">
+      <DependentUpon>Form嘉睦零件库存删除.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件库存删除.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件库存管理.Designer.vb">
+      <DependentUpon>Form嘉睦零件库存管理.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件库存管理.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦零件库存查询.Designer.vb">
+      <DependentUpon>Form嘉睦零件库存查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦零件库存查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦出货查询.Designer.vb">
+      <DependentUpon>Form嘉睦出货查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦出货查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form批量打印工艺卡.Designer.vb">
+      <DependentUpon>Form批量打印工艺卡.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form批量打印工艺卡.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form系统图纸清单.Designer.vb">
+      <DependentUpon>Form系统图纸清单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form系统图纸清单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按客户代码及图号输入价格.Designer.vb">
+      <DependentUpon>Form按客户代码及图号输入价格.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按客户代码及图号输入价格.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form补充出货价格.Designer.vb">
+      <DependentUpon>Form补充出货价格.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form补充出货价格.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form根据材料信息查图号.Designer.vb">
+      <DependentUpon>Form根据材料信息查图号.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form根据材料信息查图号.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form查询工艺信息.Designer.vb">
+      <DependentUpon>Form查询工艺信息.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询工艺信息.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦未交货订单查询.Designer.vb">
+      <DependentUpon>Form嘉睦未交货订单查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦未交货订单查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form客户退货输入.Designer.vb">
+      <DependentUpon>Form客户退货输入.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form客户退货输入.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form删除出货记录.Designer.vb">
+      <DependentUpon>Form删除出货记录.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form删除出货记录.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form收料扫描.Designer.vb">
+      <DependentUpon>Form收料扫描.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form收料扫描.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form删除订单项2.Designer.vb">
+      <DependentUpon>Form删除订单项2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form删除订单项2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按客户月出货查询.Designer.vb">
+      <DependentUpon>Form按客户月出货查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按客户月出货查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦月出货汇总.Designer.vb">
+      <DependentUpon>Form嘉睦月出货汇总.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦月出货汇总.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form查询图纸.Designer.vb">
+      <DependentUpon>Form查询图纸.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form查询图纸.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦退货录入.Designer.vb">
+      <DependentUpon>Form嘉睦退货录入.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦退货录入.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form删除订单项.Designer.vb">
+      <DependentUpon>Form删除订单项.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form删除订单项.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按客户月订单汇总查询.Designer.vb">
+      <DependentUpon>Form按客户月订单汇总查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按客户月订单汇总查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form管理者挑选组员.Designer.vb">
+      <DependentUpon>Form管理者挑选组员.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form管理者挑选组员.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form个人加工详单.Designer.vb">
+      <DependentUpon>Form个人加工详单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form个人加工详单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form工艺卡打印.Designer.vb">
+      <DependentUpon>Form工艺卡打印.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form工艺卡打印.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form工序卡信息查询.Designer.vb">
+      <DependentUpon>Form工序卡信息查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form工序卡信息查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form员工离职录入.Designer.vb">
+      <DependentUpon>Form员工离职录入.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form员工离职录入.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form非嘉睦未完成订单查询.Designer.vb">
+      <DependentUpon>Form非嘉睦未完成订单查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form非嘉睦未完成订单查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦月订单查询.Designer.vb">
+      <DependentUpon>Form嘉睦月订单查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦月订单查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form缺少价格的生产单查询.Designer.vb">
+      <DependentUpon>Form缺少价格的生产单查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form缺少价格的生产单查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按日期查询所下生产单.Designer.vb">
+      <DependentUpon>Form按日期查询所下生产单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按日期查询所下生产单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form嘉睦出货记录更改.Designer.vb">
+      <DependentUpon>Form嘉睦出货记录更改.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form嘉睦出货记录更改.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按单号图号更新价格.Designer.vb">
+      <DependentUpon>Form按单号图号更新价格.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按单号图号更新价格.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form跟单备注.Designer.vb">
+      <DependentUpon>Form跟单备注.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form跟单备注.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按整个工序扫描工时查询.Designer.vb">
+      <DependentUpon>Form按整个工序扫描工时查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按整个工序扫描工时查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form按客户订单号查询生产单.Designer.vb">
+      <DependentUpon>Form按客户订单号查询生产单.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form按客户订单号查询生产单.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form查询价格.resx">
+      <DependentUpon>Form查询价格.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form主窗体.resx">
+      <DependentUpon>Form主窗体.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form图纸信息工艺卡.resx">
+      <DependentUpon>Form图纸信息工艺卡.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form工艺编写.resx">
+      <DependentUpon>Form工艺编写.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form输入生产单.resx">
+      <DependentUpon>Form输入生产单.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form取消生产单.resx">
+      <DependentUpon>Form取消生产单.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form订单入库.resx">
+      <DependentUpon>Form订单入库.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPMC图纸记录.resx">
+      <DependentUpon>FormPMC图纸记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按生产单号查询未完成零件状况.resx">
+      <DependentUpon>Form按生产单号查询未完成零件状况.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按客户查询未完成零件状况.resx">
+      <DependentUpon>Form按客户查询未完成零件状况.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按图号查询未完成零件.resx">
+      <DependentUpon>Form按图号查询未完成零件.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form未分发及未收回图纸查询.resx">
+      <DependentUpon>Form未分发及未收回图纸查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form工艺流程卡处理.resx">
+      <DependentUpon>Form工艺流程卡处理.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form用户查询.resx">
+      <DependentUpon>Form用户查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form增加用户.resx">
+      <DependentUpon>Form增加用户.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form客户信息查询及维护.resx">
+      <DependentUpon>Form客户信息查询及维护.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form员工信息维护.resx">
+      <DependentUpon>Form员工信息维护.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form外发记录.resx">
+      <DependentUpon>Form外发记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form外发收回记录.resx">
+      <DependentUpon>Form外发收回记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form外发记录查询.resx">
+      <DependentUpon>Form外发记录查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form更改图号.resx">
+      <DependentUpon>Form更改图号.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form取消工艺.resx">
+      <DependentUpon>Form取消工艺.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form所有未完成生产单.resx">
+      <DependentUpon>Form所有未完成生产单.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form用户登录.resx">
+      <DependentUpon>Form用户登录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form增加供应商.resx">
+      <DependentUpon>Form增加供应商.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form品质部终检记录.resx">
+      <DependentUpon>Form品质部终检记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按单号图号录入终检记录.resx">
+      <DependentUpon>Form按单号图号录入终检记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form查询终检记录.resx">
+      <DependentUpon>Form查询终检记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form查询所有终检记录.resx">
+      <DependentUpon>Form查询所有终检记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form工艺修改.resx">
+      <DependentUpon>Form工艺修改.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form下料完成记录.resx">
+      <DependentUpon>Form下料完成记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form放入图档 PDFJPG.resx">
+      <DependentUpon>Form放入图档 PDFJPG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form修改供应商.resx">
+      <DependentUpon>Form修改供应商.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form更新价格.resx">
+      <DependentUpon>Form更新价格.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form订单查询.resx">
+      <DependentUpon>Form订单查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form查询订单信息.resx">
+      <DependentUpon>Form查询订单信息.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form返工记录.resx">
+      <DependentUpon>Form返工记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form返工收回.resx">
+      <DependentUpon>Form返工收回.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form查询返工记录.resx">
+      <DependentUpon>Form查询返工记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form工序个人工时查询.resx">
+      <DependentUpon>Form工序个人工时查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件交期信息查询.resx">
+      <DependentUpon>Form嘉睦零件交期信息查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件最新信息查询.resx">
+      <DependentUpon>Form嘉睦零件最新信息查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件生产状态查询.resx">
+      <DependentUpon>Form嘉睦零件生产状态查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件未完成订单信息.resx">
+      <DependentUpon>Form嘉睦零件未完成订单信息.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form订单出货记录.resx">
+      <DependentUpon>Form订单出货记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form主管工序扫描.resx">
+      <DependentUpon>Form主管工序扫描.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form出货查询.resx">
+      <DependentUpon>Form出货查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form补入订单价格.resx">
+      <DependentUpon>Form补入订单价格.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦订单录入.resx">
+      <DependentUpon>Form嘉睦订单录入.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦出货记录.resx">
+      <DependentUpon>Form嘉睦出货记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦订单查询.resx">
+      <DependentUpon>Form嘉睦订单查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦订单特别显示.resx">
+      <DependentUpon>Form嘉睦订单特别显示.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件库存删除.resx">
+      <DependentUpon>Form嘉睦零件库存删除.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件库存管理.resx">
+      <DependentUpon>Form嘉睦零件库存管理.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦零件库存查询.resx">
+      <DependentUpon>Form嘉睦零件库存查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦出货查询.resx">
+      <DependentUpon>Form嘉睦出货查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form批量打印工艺卡.resx">
+      <DependentUpon>Form批量打印工艺卡.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form系统图纸清单.resx">
+      <DependentUpon>Form系统图纸清单.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按客户代码及图号输入价格.resx">
+      <DependentUpon>Form按客户代码及图号输入价格.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form补充出货价格.resx">
+      <DependentUpon>Form补充出货价格.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form根据材料信息查图号.resx">
+      <DependentUpon>Form根据材料信息查图号.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form查询工艺信息.resx">
+      <DependentUpon>Form查询工艺信息.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦未交货订单查询.resx">
+      <DependentUpon>Form嘉睦未交货订单查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form客户退货输入.resx">
+      <DependentUpon>Form客户退货输入.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form删除出货记录.resx">
+      <DependentUpon>Form删除出货记录.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form收料扫描.resx">
+      <DependentUpon>Form收料扫描.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form删除订单项2.resx">
+      <DependentUpon>Form删除订单项2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按客户月出货查询.resx">
+      <DependentUpon>Form按客户月出货查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦月出货汇总.resx">
+      <DependentUpon>Form嘉睦月出货汇总.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form查询图纸.resx">
+      <DependentUpon>Form查询图纸.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦退货录入.resx">
+      <DependentUpon>Form嘉睦退货录入.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form删除订单项.resx">
+      <DependentUpon>Form删除订单项.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按客户月订单汇总查询.resx">
+      <DependentUpon>Form按客户月订单汇总查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form管理者挑选组员.resx">
+      <DependentUpon>Form管理者挑选组员.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form个人加工详单.resx">
+      <DependentUpon>Form个人加工详单.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form工艺卡打印.resx">
+      <DependentUpon>Form工艺卡打印.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form工序卡信息查询.resx">
+      <DependentUpon>Form工序卡信息查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form员工离职录入.resx">
+      <DependentUpon>Form员工离职录入.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form非嘉睦未完成订单查询.resx">
+      <DependentUpon>Form非嘉睦未完成订单查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦月订单查询.resx">
+      <DependentUpon>Form嘉睦月订单查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form缺少价格的生产单查询.resx">
+      <DependentUpon>Form缺少价格的生产单查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按日期查询所下生产单.resx">
+      <DependentUpon>Form按日期查询所下生产单.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form嘉睦出货记录更改.resx">
+      <DependentUpon>Form嘉睦出货记录更改.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按单号图号更新价格.resx">
+      <DependentUpon>Form按单号图号更新价格.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form跟单备注.resx">
+      <DependentUpon>Form跟单备注.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按整个工序扫描工时查询.resx">
+      <DependentUpon>Form按整个工序扫描工时查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form按客户订单号查询生产单.resx">
+      <DependentUpon>Form按客户订单号查询生产单.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="SFOrderTracking_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="crashdump.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
