@@ -4,7 +4,8 @@
         Form用户登录.Show()
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        StatusStrip1.Items(0).Text = "赛峰 ERP 20190305sw"
+        AutoUpdater.Start("http://192.168.0.76:8013/ERPUpdater.xml")
+        StatusStrip1.Items(0).Text = "赛峰 ERP 20190306"
         StatusStrip1.Items(2).Alignment = ToolStripItemAlignment.Right
         StatusStrip1.Items(2).Text = "          用户名：匿名"
         Me.Width = 900

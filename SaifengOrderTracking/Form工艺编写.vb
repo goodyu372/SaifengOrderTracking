@@ -56,6 +56,21 @@
         TextBox7.Text = rs.Fields("Qty").Value
         '*************************** end of combobox2 connection *****************************************************************
         rs.Close()
+
+        '显示当前工件的单件报价
+        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
+        rs.Open(SQLstring, cn, 1, 1)
+        Dim price As String
+        price = rs.Fields(0).Value.ToString()
+        Dim str As String
+        If String.IsNullOrEmpty(price) Then
+            str = "无报价"
+        Else
+            str = price
+        End If
+        Label_Price.Text = "当前单件报价￥：" + str
+        rs.Close()
+
         '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
         'SQLstring = "Select DrawNo, SFOrder,CustCode CustDWG, ProcSN, ProcName, ProcDesc, Qty, ProcQty From ProcCard"
         'SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From CardList where DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'"
@@ -89,7 +104,9 @@
             DataRow = DataRow + 1
             rs.MoveNext()
         Loop
+
         rs.Close()
+        cn.Close()
         '88888888888888888888888888 end of 对应图号工艺列表结束 8888888888888888888888888888888888888888888888888888888888888888888888
         rs = Nothing
         cn = Nothing
@@ -152,19 +169,19 @@
                 rs.MoveNext()
             Loop
 
-            rs.Close()
-            '显示当前工件的报价
-            SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
-            rs.Open(SQLstring, cn, 1, 1)
-            Dim price As String
-            price = rs.Fields(0).Value.ToString()
-            Dim str As String
-            If String.IsNullOrEmpty(price) Then
-                str = "无报价"
-            Else
-                str = price
-            End If
-            Label_Price.Text = "当前报价￥：" + str
+            'rs.Close()
+            ''显示当前工件的单件报价
+            'SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
+            'rs.Open(SQLstring, cn, 1, 1)
+            'Dim price As String
+            'price = rs.Fields(0).Value.ToString()
+            'Dim str As String
+            'If String.IsNullOrEmpty(price) Then
+            '    str = "无报价"
+            'Else
+            '    str = price
+            'End If
+            'Label_Price.Text = "当前单件报价￥：" + str
 
             rs.Close()
             '*************************** end of combobox2 connection *****************************************************************
@@ -202,9 +219,9 @@
             If String.IsNullOrEmpty(ProcName) = False Then  '如果工序名称不是空
                 SQLstring = "select * From Resource where Resource='" + ProcName + "'"
                 rs.Open(SQLstring, cn, 1, 1)
-                是否需要预估成本 = rs.Fields(1).Value
-                是否有成本单价 = rs.Fields(2).Value
-                成本单价 = rs.Fields(3).Value
+                是否需要预估成本 = rs.Fields(2).Value
+                是否有成本单价 = rs.Fields(3).Value
+                成本单价 = rs.Fields(4).Value
                 If 是否需要预估成本 = "是" Then
                     If 是否有成本单价 = "是" Then
                         If DataGridView2.Item(4, i).Value = Nothing Or DataGridView2.Item(4, i).Value.ToString() = "" Then  '该工序单件工时判断用户输入没有,如果用户没输入则报警提示
@@ -345,13 +362,14 @@
         rs.Open(QueryText, cn, 1, 1)
         Dim dd As New DataGridViewComboBoxColumn '定义工序名称下拉清单
         Do While rs.EOF = False
-            dd.Items.Add(rs(0).Value)
+            dd.Items.Add(rs(1).Value)
             rs.MoveNext()
         Loop
         '**************************************** 编写工艺列表 ************************************************************************
         DataGridView2.Columns.Add("工序号", "工序号")
         DataGridView2.Columns.Add(dd)
         DataGridView2.Columns.Add("工序内容和注意事项", "工序内容和注意事项")
+        DataGridView2.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridView2.Columns.Add("准备工时h", "准备工时h")
         DataGridView2.Columns.Add("单件工时h", "单件工时h")
         DataGridView2.Columns.Add("该工序预计单件成本¥", "该工序预计单件成本¥")

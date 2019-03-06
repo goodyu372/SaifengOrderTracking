@@ -293,9 +293,9 @@ Partial Class Form工艺编写
         Me.Label_Price.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label_Price.Location = New System.Drawing.Point(615, 178)
         Me.Label_Price.Name = "Label_Price"
-        Me.Label_Price.Size = New System.Drawing.Size(77, 12)
+        Me.Label_Price.Size = New System.Drawing.Size(101, 12)
         Me.Label_Price.TabIndex = 29
-        Me.Label_Price.Text = "当前报价￥："
+        Me.Label_Price.Text = "当前单件报价￥："
         '
         'Label_预计单件成本
         '

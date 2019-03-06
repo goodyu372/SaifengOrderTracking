@@ -37,8 +37,9 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SaifengOrderTracking.xml</DocumentationFile>
+    <OutputPath>bin\最新ERP【需拷贝该完整文件夹】\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -48,7 +49,8 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SaifengOrderTracking.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -90,8 +92,8 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\3rdDLL\ADODB.dll</HintPath>
     </Reference>
-    <Reference Include="BarcodeDLL">
-      <HintPath>..\3rdDLL\BarcodeDLL.dll</HintPath>
+    <Reference Include="AutoUpdater.NET, Version=1.5.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.5.0\lib\net40\AutoUpdater.NET.dll</HintPath>
     </Reference>
     <Reference Include="Interop.Acrobat">
       <HintPath>..\3rdDLL\Interop.Acrobat.dll</HintPath>
@@ -146,6 +148,7 @@
   <ItemGroup>
     <Import Include="ADODB" />
     <Import Include="ADOX" />
+    <Import Include="AutoUpdaterDotNET" />
     <Import Include="BarcodeDLL" />
     <Import Include="BARCODELib" />
     <Import Include="Microsoft" />
@@ -992,6 +995,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="SFOrderTracking_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
