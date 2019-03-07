@@ -55,7 +55,6 @@ Partial Class Form主窗体
         Me.ProcessInputMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.工艺编制ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.工艺卡处理ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.工艺修改ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.打印工艺卡ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.分类查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -323,7 +322,7 @@ Partial Class Form主窗体
         '
         'ProcessInputMenuItem
         '
-        Me.ProcessInputMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工艺编制ToolStripMenuItem1, Me.工艺卡处理ToolStripMenuItem1, Me.工艺修改ToolStripMenuItem1, Me.打印工艺卡ToolStripMenuItem1})
+        Me.ProcessInputMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工艺编制ToolStripMenuItem1, Me.工艺卡处理ToolStripMenuItem1, Me.打印工艺卡ToolStripMenuItem1})
         Me.ProcessInputMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ProcessInputMenuItem.Name = "ProcessInputMenuItem"
         Me.ProcessInputMenuItem.Size = New System.Drawing.Size(86, 25)
@@ -333,26 +332,20 @@ Partial Class Form主窗体
         '工艺编制ToolStripMenuItem1
         '
         Me.工艺编制ToolStripMenuItem1.Name = "工艺编制ToolStripMenuItem1"
-        Me.工艺编制ToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
+        Me.工艺编制ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
         Me.工艺编制ToolStripMenuItem1.Text = "工艺编制"
         '
         '工艺卡处理ToolStripMenuItem1
         '
         Me.工艺卡处理ToolStripMenuItem1.Name = "工艺卡处理ToolStripMenuItem1"
-        Me.工艺卡处理ToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
+        Me.工艺卡处理ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
         Me.工艺卡处理ToolStripMenuItem1.Text = "工艺卡处理"
         Me.工艺卡处理ToolStripMenuItem1.Visible = False
-        '
-        '工艺修改ToolStripMenuItem1
-        '
-        Me.工艺修改ToolStripMenuItem1.Name = "工艺修改ToolStripMenuItem1"
-        Me.工艺修改ToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
-        Me.工艺修改ToolStripMenuItem1.Text = "工艺修改"
         '
         '打印工艺卡ToolStripMenuItem1
         '
         Me.打印工艺卡ToolStripMenuItem1.Name = "打印工艺卡ToolStripMenuItem1"
-        Me.打印工艺卡ToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
+        Me.打印工艺卡ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
         Me.打印工艺卡ToolStripMenuItem1.Text = "打印工艺卡"
         '
         'ToolStripMenuItem1
@@ -913,7 +906,6 @@ Partial Class Form主窗体
     Friend WithEvents 未处理图纸查询ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 工艺编制ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 工艺卡处理ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 工艺修改ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 打印工艺卡ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel

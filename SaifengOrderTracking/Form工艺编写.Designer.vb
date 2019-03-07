@@ -26,16 +26,16 @@ Partial Class Form工艺编写
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_生产单号 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox_未写工艺图号 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox_已选图号 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox_DWGInfo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox_CustCode = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -49,6 +49,8 @@ Partial Class Form工艺编写
         Me.Label_Price = New System.Windows.Forms.Label()
         Me.Label_预计单件成本 = New System.Windows.Forms.Label()
         Me.Label_预计总成本 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox_已写工艺图号 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,7 +84,7 @@ Partial Class Form工艺编写
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(615, 25)
+        Me.Label1.Location = New System.Drawing.Point(414, 29)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(120, 16)
         Me.Label1.TabIndex = 2
@@ -90,29 +92,29 @@ Partial Class Form工艺编写
         '
         'TextBox_生产单号
         '
-        Me.TextBox_生产单号.Location = New System.Drawing.Point(739, 20)
+        Me.TextBox_生产单号.Location = New System.Drawing.Point(528, 25)
         Me.TextBox_生产单号.Name = "TextBox_生产单号"
         Me.TextBox_生产单号.Size = New System.Drawing.Size(99, 21)
         Me.TextBox_生产单号.TabIndex = 3
         '
-        'ComboBox2
+        'ComboBox_未写工艺图号
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(724, 58)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(291, 20)
-        Me.ComboBox2.TabIndex = 5
+        Me.ComboBox_未写工艺图号.FormattingEnabled = True
+        Me.ComboBox_未写工艺图号.Location = New System.Drawing.Point(777, 24)
+        Me.ComboBox_未写工艺图号.Name = "ComboBox_未写工艺图号"
+        Me.ComboBox_未写工艺图号.Size = New System.Drawing.Size(291, 20)
+        Me.ComboBox_未写工艺图号.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(617, 62)
+        Me.Label2.Location = New System.Drawing.Point(658, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 16)
+        Me.Label2.Size = New System.Drawing.Size(113, 12)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "选择图号："
+        Me.Label2.Text = "选择未写工艺图号："
         '
         'TextBox_已选图号
         '
@@ -127,7 +129,7 @@ Partial Class Form工艺编写
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(97, 25)
+        Me.Label3.Location = New System.Drawing.Point(16, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(168, 16)
         Me.Label3.TabIndex = 8
@@ -141,13 +143,13 @@ Partial Class Form工艺编写
         Me.TextBox3.Size = New System.Drawing.Size(291, 21)
         Me.TextBox3.TabIndex = 9
         '
-        'TextBox4
+        'TextBox_DWGInfo
         '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(724, 149)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(291, 21)
-        Me.TextBox4.TabIndex = 10
+        Me.TextBox_DWGInfo.Enabled = False
+        Me.TextBox_DWGInfo.Location = New System.Drawing.Point(724, 149)
+        Me.TextBox_DWGInfo.Name = "TextBox_DWGInfo"
+        Me.TextBox_DWGInfo.Size = New System.Drawing.Size(291, 21)
+        Me.TextBox_DWGInfo.TabIndex = 10
         '
         'Label4
         '
@@ -176,19 +178,19 @@ Partial Class Form工艺编写
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(617, 148)
+        Me.Label6.Location = New System.Drawing.Point(612, 149)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 16)
+        Me.Label6.Size = New System.Drawing.Size(104, 16)
         Me.Label6.TabIndex = 13
-        Me.Label6.Text = "图号全息："
+        Me.Label6.Text = "图号全信息："
         '
-        'TextBox5
+        'TextBox_CustCode
         '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(1132, 20)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(79, 21)
-        Me.TextBox5.TabIndex = 14
+        Me.TextBox_CustCode.Enabled = False
+        Me.TextBox_CustCode.Location = New System.Drawing.Point(1132, 20)
+        Me.TextBox_CustCode.Name = "TextBox_CustCode"
+        Me.TextBox_CustCode.Size = New System.Drawing.Size(79, 21)
+        Me.TextBox_CustCode.TabIndex = 14
         '
         'TextBox6
         '
@@ -241,7 +243,7 @@ Partial Class Form工艺编写
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(298, 26)
+        Me.TextBox8.Location = New System.Drawing.Point(177, 26)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(208, 26)
         Me.TextBox8.TabIndex = 21
@@ -319,11 +321,32 @@ Partial Class Form工艺编写
         Me.Label_预计总成本.TabIndex = 31
         Me.Label_预计总成本.Text = "预计总成本￥:"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(605, 60)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(113, 12)
+        Me.Label9.TabIndex = 33
+        Me.Label9.Text = "选择已写工艺图号："
+        '
+        'ComboBox_已写工艺图号
+        '
+        Me.ComboBox_已写工艺图号.FormattingEnabled = True
+        Me.ComboBox_已写工艺图号.Location = New System.Drawing.Point(724, 56)
+        Me.ComboBox_已写工艺图号.Name = "ComboBox_已写工艺图号"
+        Me.ComboBox_已写工艺图号.Size = New System.Drawing.Size(291, 20)
+        Me.ComboBox_已写工艺图号.TabIndex = 32
+        '
         'Form工艺编写
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1233, 820)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.ComboBox_已写工艺图号)
         Me.Controls.Add(Me.Label_预计总成本)
         Me.Controls.Add(Me.Label_预计单件成本)
         Me.Controls.Add(Me.Label_Price)
@@ -337,16 +360,16 @@ Partial Class Form工艺编写
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBox_CustCode)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox_DWGInfo)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox_已选图号)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox_未写工艺图号)
         Me.Controls.Add(Me.TextBox_生产单号)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView2)
@@ -364,16 +387,16 @@ Partial Class Form工艺编写
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox_生产单号 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox_未写工艺图号 As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox_已选图号 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_DWGInfo As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_CustCode As System.Windows.Forms.TextBox
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -387,4 +410,6 @@ Partial Class Form工艺编写
     Friend WithEvents Label_Price As System.Windows.Forms.Label
     Friend WithEvents Label_预计单件成本 As System.Windows.Forms.Label
     Friend WithEvents Label_预计总成本 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox_已写工艺图号 As ComboBox
 End Class

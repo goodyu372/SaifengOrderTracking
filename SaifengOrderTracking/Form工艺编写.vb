@@ -15,8 +15,10 @@
         cn.Open(CNsfmdb)
         rs.Open(QueryText, cn, 1, 1)
         Dim dd As New DataGridViewComboBoxColumn
+        dd.HeaderText = "资源名称"
+        dd.Name = "资源名称"
         Do While rs.EOF = False
-            dd.Items.Add(rs(0).Value)
+            dd.Items.Add(rs(1).Value)
             rs.MoveNext()
         Loop
         '**************************************** 编写工艺列表 ************************************************************************
@@ -28,89 +30,11 @@
         DataGridView2.Columns.Add("该工序预计单件成本¥", "该工序预计单件成本¥")
         For i = 0 To DataGridView2.Columns.Count - 1
             DataGridView2.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-            DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-
         Next
-        DataGridView2.Columns("工序号").ReadOnly = True
-        DataGridView2.Columns(1).HeaderText = "资源名称"
-        DataGridView2.Columns(1).Name = "资源名称"
 
-    End Sub
+        DataGridView2.Columns("资源名称").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DataGridView2.Columns("工序内容和注意事项").AutoSizeMode = DataGridViewAutoSizeColumnsMode.Fill
 
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        'shell(SFOrderBaseNetConnect, vbHide)
-        TextBox_已选图号.Text = ComboBox2.SelectedItem.ToString '已选图号
-        TextBox3.Text = TextBox5.Text + TextBox_已选图号.Text
-        TextBox4.Text = TextBox5.Text + TextBox_已选图号.Text + TextBox_生产单号.Text
-
-        Dim cn As New ADODB.Connection
-        Dim rs As New ADODB.Recordset
-        'Dim SQLstring As String
-        Dim SQLstring As String
-        cn.Open(CNsfmdb)
-        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'" & "))"
-        'rs.Open(SQLstring, cn, 1, 2)
-        rs.Open(SQLstring, cn, 1, 1)
-        rs.MoveFirst()
-        TextBox6.Text = rs.Fields("Qty").Value
-        TextBox7.Text = rs.Fields("Qty").Value
-        '*************************** end of combobox2 connection *****************************************************************
-        rs.Close()
-
-        '显示当前工件的单件报价
-        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
-        rs.Open(SQLstring, cn, 1, 1)
-        Dim price As String
-        price = rs.Fields(0).Value.ToString()
-        Dim str As String
-        If String.IsNullOrEmpty(price) Then
-            str = "无报价"
-        Else
-            str = price
-        End If
-        Label_Price.Text = "当前单件报价￥：" + str
-        rs.Close()
-
-        '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-        'SQLstring = "Select DrawNo, SFOrder,CustCode CustDWG, ProcSN, ProcName, ProcDesc, Qty, ProcQty From ProcCard"
-        'SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From CardList where DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'"
-        SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "' group by DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
-        DataGridView1.Columns.Clear()
-        DataGridView1.Rows.Clear()
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-
-        'rs.Open(SQLstring, cn, 1, 2)
-        rs.Open(SQLstring, cn, 1, 1)
-        If (rs.RecordCount = 0) Then
-            rs.Close()
-            cn.Close()
-            rs = Nothing
-            cn = Nothing
-            'shell(SFOrderBaseNetDisconnect, vbHide)
-            Exit Sub
-        End If
-        rs.MoveFirst()
-        For i = 1 To rs.Fields.Count
-            DataGridView1.Columns.Add(rs.Fields(i - 1).Name, rs.Fields(i - 1).Name)
-        Next
-        DataGridView1.Rows.Add(rs.RecordCount)
-
-        Dim DataRow As Integer
-        DataRow = 0
-        Do While rs.EOF = False
-            For i = 1 To rs.Fields.Count
-                DataGridView1.Item(i - 1, DataRow).Value = rs.Fields(i - 1).Value
-            Next i
-            DataRow = DataRow + 1
-            rs.MoveNext()
-        Loop
-
-        rs.Close()
-        cn.Close()
-        '88888888888888888888888888 end of 对应图号工艺列表结束 8888888888888888888888888888888888888888888888888888888888888888888888
-        rs = Nothing
-        cn = Nothing
-        'shell(SFOrderBaseNetDisconnect, vbHide)
     End Sub
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
@@ -119,21 +43,6 @@
             Dim rs As New ADODB.Recordset
             'Dim SQLstring As String
             Dim SQLstring As String
-            Dim ProcSN As Integer
-
-            DataGridView2.Rows.Clear()
-            DataGridView2.Columns.Clear()
-
-            DataGridView2.Columns.Add("工序号", "工序号")
-            DataGridView2.Columns.Add("资源名称", "资源名称")
-            DataGridView2.Columns.Add("工序内容和注意事项", "工序内容和注意事项")
-            DataGridView2.Columns.Add("准备工时h", "准备工时h")
-            DataGridView2.Columns.Add("单件工时h", "单件工时h")
-            DataGridView2.Columns.Add("该工序预计单件成本¥", "该工序预计单件成本¥")
-            For i = 0 To DataGridView2.Columns.Count - 1
-                DataGridView2.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-            Next
-            DataGridView2.Columns("工序号").ReadOnly = True
 
             cn.Open(CNsfmdb)
             SQLstring = "Select * From ProcCard where DWGInfo=" & "'" & DataGridView1.Item(0, e.RowIndex).Value & "' order by ProcSN"
@@ -145,49 +54,22 @@
                 Return
             End If
 
+            DataGridView2.Rows.Clear()
             DataGridView2.Rows.Add(rs.RecordCount)
 
             Dim DataRow As Integer
             DataRow = 0
-            ProcSN = 10
             Do While rs.EOF = False
-                For i = 1 To rs.Fields.Count
-                    'DataGridView1.Item(i - 1, DataRow).Value = rs.Fields(i - 1).Value
-                    If (rs.Fields(i - 1).Name = "ProcSN") Then
-                        DataGridView2.Item(0, DataRow).Value = ProcSN
-                    End If
-                    If (rs.Fields(i - 1).Name = "ProcName") Then
-                        DataGridView2.Item(1, DataRow).Value = rs.Fields(i - 1).Value
-                    End If
-                    If (rs.Fields(i - 1).Name = "ProcDesc") Then
-                        DataGridView2.Item(2, DataRow).Value = rs.Fields(i - 1).Value
-                    End If
-                    If (rs.Fields(i - 1).Name = "PreTime") Then
-                        DataGridView2.Item(3, DataRow).Value = rs.Fields(i - 1).Value
-                    End If
-                    If (rs.Fields(i - 1).Name = "UnitTime") Then
-                        DataGridView2.Item(4, DataRow).Value = rs.Fields(i - 1).Value
-                    End If
-                    'DataGridView2.Item(6, DataRow).Value = Val(rs.Fields("PreTime").Value) + Val(TextBox7.Text) * Val(rs.Fields("UnitTime").Value)
-                Next i
+                DataGridView2.Item("工序号", DataRow).Value = rs.Fields("ProcSN").Value
+                DataGridView2.Item("资源名称", DataRow).Value = rs.Fields("ProcName").Value
+                DataGridView2.Item("工序内容和注意事项", DataRow).Value = rs.Fields("ProcDesc").Value
+                DataGridView2.Item("准备工时h", DataRow).Value = rs.Fields("PreTime").Value
+                DataGridView2.Item("单件工时h", DataRow).Value = rs.Fields("UnitTime").Value
+                DataGridView2.Item("该工序预计单件成本¥", DataRow).Value = rs.Fields("该工序预计单件成本").Value
+
                 DataRow = DataRow + 1
-                ProcSN = ProcSN + 10
                 rs.MoveNext()
             Loop
-
-            'rs.Close()
-            ''显示当前工件的单件报价
-            'SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
-            'rs.Open(SQLstring, cn, 1, 1)
-            'Dim price As String
-            'price = rs.Fields(0).Value.ToString()
-            'Dim str As String
-            'If String.IsNullOrEmpty(price) Then
-            '    str = "无报价"
-            'Else
-            '    str = price
-            'End If
-            'Label_Price.Text = "当前单件报价￥：" + str
 
             rs.Close()
             '*************************** end of combobox2 connection *****************************************************************
@@ -275,6 +157,11 @@
 
         If MsgBox($"单件报价¥{str} 预计单件成本¥:{预计单件成本} 工艺数量{Val(TextBox6.Text)} 预计总成本¥:{预计总成本}", MsgBoxStyle.OkCancel, "请确认是否无误") = MsgBoxResult.Ok Then
 
+            SQLstring = "delete ProcCard where DWGInfo = " & "'" & TextBox_DWGInfo.Text & "'"
+            cn.Open(CNsfmdb)
+            rs.Open(SQLstring, cn, 1, 3)
+            rs.Close()
+
             SQLstring = "select * From ProcCard order by ID"
             Dim ID As Integer
 
@@ -288,7 +175,7 @@
                     ID = ID + 1
                     rs.AddNew()
                     rs.Fields("ID").Value = ID
-                    rs.Fields("DWGInfo").Value = TextBox4.Text
+                    rs.Fields("DWGInfo").Value = TextBox_DWGInfo.Text
                     rs.Fields("CustDWG").Value = TextBox3.Text
                     rs.Fields("SFOrder").Value = TextBox_生产单号.Text
                     rs.Fields("DrawNo").Value = TextBox_已选图号.Text
@@ -296,7 +183,7 @@
                     rs.Fields("ProcDate").Value = Now.Date
                     rs.Fields("Qty").Value = Val(TextBox7.Text)
                     rs.Fields("ProcQty").Value = Val(TextBox6.Text) '工艺数量
-                    rs.Fields("CustCode").Value = TextBox5.Text
+                    rs.Fields("CustCode").Value = TextBox_CustCode.Text
                     rs.Fields("ProcSN").Value = DataGridView2.Item(0, i).Value
                     rs.Fields("ProcName").Value = DataGridView2.Item(1, i).Value
                     rs.Fields("ProcDesc").Value = DataGridView2.Item(2, i).Value
@@ -327,9 +214,8 @@
             cn = Nothing
 
             DataGridView2.Rows.Clear()
-            'ComboBox2.Items.Clear()
-            ComboBox2.Items.Remove(TextBox_已选图号.Text)
-            ComboBox2.Text = ""
+
+            TextBox1_KeyDown(Nothing, Nothing)
 
             '*************************** end of combobox2 connection *****************************************************************
             MsgBox(TextBox_生产单号.Text & "    " & TextBox_已选图号.Text & "  工艺卡编写完成！")
@@ -355,44 +241,13 @@
     '    Next i
 
     'End Sub
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        DataGridView2.Rows.Clear()
-        DataGridView2.Columns.Clear()
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         '*************************** end of combobox1 connection *****************************************************************
-        Dim QueryText As String
-
-        QueryText = "Select * from Resource"
-        Dim cn As New ADODB.Connection
-        Dim rs As New ADODB.Recordset
-
-        cn.Open(CNsfmdb)
-        rs.Open(QueryText, cn, 1, 1)
-        Dim dd As New DataGridViewComboBoxColumn '定义工序名称下拉清单
-        Do While rs.EOF = False
-            dd.Items.Add(rs(1).Value)
-            rs.MoveNext()
-        Loop
-        '**************************************** 编写工艺列表 ************************************************************************
-        DataGridView2.Columns.Add("工序号", "工序号")
-        DataGridView2.Columns.Add(dd)
-        DataGridView2.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        DataGridView2.Columns.Add("工序内容和注意事项", "工序内容和注意事项")
-        DataGridView2.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnsMode.Fill
-        DataGridView2.Columns.Add("准备工时h", "准备工时h")
-        DataGridView2.Columns.Add("单件工时h", "单件工时h")
-        DataGridView2.Columns.Add("该工序预计单件成本¥", "该工序预计单件成本¥")
-        For i = 0 To DataGridView2.Columns.Count - 1
-            DataGridView2.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
-        Next
-        DataGridView2.Columns("工序号").ReadOnly = True
-        DataGridView2.Columns(1).HeaderText = "资源名称"
-        DataGridView2.Columns(1).Name = "资源名称"
-
-        DataGridView2.Rows.Add(15)
+        DataGridView2.Rows.Clear()
+        DataGridView2.Rows.Add(15) '新增15行
         Dim DataRow, ProcSN As Integer
         DataRow = 0
-        ProcSN = 10
+        ProcSN = 10 '第一排工序号为10，后续递增5
         For i = 0 To DataGridView2.Rows.Count - 2
             DataGridView2.Item(0, i).Value = ProcSN
             ProcSN = ProcSN + 5
@@ -485,47 +340,253 @@ ErrorExit:
             SQLstring = "Select * From SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "'"
             TextBox_已选图号.Clear()
             TextBox3.Clear()
-            TextBox4.Clear()
+            TextBox_DWGInfo.Clear()
 
             cn.Open(CNsfmdb)
             'rs.Open(SQLstring, cn, 1, 2)
             rs.Open(SQLstring, cn, 1, 1)
             rs.MoveFirst()
-            TextBox5.Text = rs.Fields("CustCode").Value
+            TextBox_CustCode.Text = rs.Fields("CustCode").Value
             TextBox3.Text = rs.Fields("CustCode").Value + TextBox_已选图号.Text
-            TextBox4.Text = rs.Fields("CustCode").Value + TextBox_已选图号.Text + TextBox_生产单号.Text
+            TextBox_DWGInfo.Text = rs.Fields("CustCode").Value + TextBox_已选图号.Text + TextBox_生产单号.Text
             rs.Close()
+
             '********************************** combobox2onnection *****************************************************************
-            ComboBox2.Items.Clear()
+            ComboBox_未写工艺图号.Items.Clear()
             SQLstring = "Select DrawNo From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo not in (Select DrawNo from SFAll.dbo.ProcCard where SFOrder=" & "'" & TextBox_生产单号.Text & "')))"
             rs.Open(SQLstring, cn, 1, 1)
             If (rs.RecordCount = 0) Then
                 MsgBox("此生产单所有零件均已完成工艺！")
-                TextBox_已选图号.Clear()
-                TextBox3.Clear()
-                TextBox4.Clear()
-                rs.Clone()
-                cn.Close()
-                rs = Nothing
-                cn = Nothing
-                'shell(SFOrderBaseNetDisconnect, vbHide)
-                Exit Sub
+            Else
+                rs.MoveFirst()
+                Do While Not rs.EOF
+                    ComboBox_未写工艺图号.Items.Add(rs("DrawNo").Value)
+                    rs.MoveNext()
+                Loop
             End If
-            rs.MoveFirst()
-
-            Do While Not rs.EOF
-                ComboBox2.Items.Add(rs("DrawNo").Value)
-                rs.MoveNext()
-            Loop
             rs.Close()
             '*************************** end of combobox2 connection *****************************************************************
+
+
+            ComboBox_已写工艺图号.Items.Clear()
+            SQLstring = "Select DrawNo From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo in (Select DrawNo from SFAll.dbo.ProcCard where SFOrder=" & "'" & TextBox_生产单号.Text & "')))"
+            rs.Open(SQLstring, cn, 1, 1)
+            If (rs.RecordCount = 0) Then
+                MsgBox("此生产单已完成工艺的图号记录数为0！")
+            Else
+                rs.MoveFirst()
+                Do While Not rs.EOF
+                    ComboBox_已写工艺图号.Items.Add(rs("DrawNo").Value)
+                    rs.MoveNext()
+                Loop
+            End If
+
+            rs.Close()
             cn.Close()
             rs = Nothing
             cn = Nothing
+
         End If
     End Sub
 
     Private Sub DataGridView2_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles DataGridView2.DataError
         DataGridView2.Rows(e.RowIndex).DefaultCellStyle.ForeColor = Color.Red
+    End Sub
+
+    Private Sub ComboBox_已写工艺图号_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles ComboBox_已写工艺图号.SelectionChangeCommitted
+        ComboBox_未写工艺图号.SelectedItem = Nothing
+
+        If ComboBox_已写工艺图号.SelectedItem IsNot Nothing Then
+            TextBox_已选图号.Text = ComboBox_已写工艺图号.SelectedItem.ToString '已选图号
+        Else
+            If ComboBox_未写工艺图号.SelectedItem IsNot Nothing Then
+                TextBox_已选图号.Text = ComboBox_未写工艺图号.SelectedItem.ToString '已选图号
+            End If
+        End If
+
+        TextBox3.Text = TextBox_CustCode.Text + TextBox_已选图号.Text
+        TextBox_DWGInfo.Text = TextBox_CustCode.Text + TextBox_已选图号.Text + TextBox_生产单号.Text
+
+        Dim cn As New ADODB.Connection
+        Dim rs As New ADODB.Recordset
+        'Dim SQLstring As String
+        Dim SQLstring As String
+        cn.Open(CNsfmdb)
+        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=" & "'" & TextBox_已选图号.Text & "'" & "))"
+        'rs.Open(SQLstring, cn, 1, 2)
+        rs.Open(SQLstring, cn, 1, 1)
+        rs.MoveFirst()
+        TextBox6.Text = rs.Fields("Qty").Value
+        TextBox7.Text = rs.Fields("Qty").Value
+        '*************************** end of combobox2 connection *****************************************************************
+        rs.Close()
+
+        '显示当前工件的单件报价
+        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
+        rs.Open(SQLstring, cn, 1, 1)
+        Dim price As String
+        price = rs.Fields(0).Value.ToString()
+        Dim str As String
+        If String.IsNullOrEmpty(price) Then
+            str = "无报价"
+        Else
+            str = price
+        End If
+        Label_Price.Text = "当前单件报价￥：" + str
+        rs.Close()
+
+        '显示当前已写的工艺列表
+        SQLstring = "Select * From ProcCard where DWGInfo=" & "'" & TextBox_DWGInfo.Text & "' order by ProcSN"
+        'rs.Open(SQLstring, cn, 1, 2)
+        rs.Open(SQLstring, cn, 1, 1)
+
+        If rs.RecordCount = 0 Then
+            MsgBox($"DWGInfo= {TextBox_DWGInfo.Text} 不存在！工艺卡中没有此记录数据！")
+            Return
+        End If
+
+        DataGridView2.Rows.Clear()
+        DataGridView2.Rows.Add(rs.RecordCount)
+
+        Dim DataRow As Integer
+        DataRow = 0
+        Do While rs.EOF = False
+            DataGridView2.Item("工序号", DataRow).Value = rs.Fields("ProcSN").Value
+            DataGridView2.Item("资源名称", DataRow).Value = rs.Fields("ProcName").Value
+            DataGridView2.Item("工序内容和注意事项", DataRow).Value = rs.Fields("ProcDesc").Value
+            DataGridView2.Item("准备工时h", DataRow).Value = rs.Fields("PreTime").Value
+            DataGridView2.Item("单件工时h", DataRow).Value = rs.Fields("UnitTime").Value
+            DataGridView2.Item("该工序预计单件成本¥", DataRow).Value = rs.Fields("该工序预计单件成本").Value
+            DataRow = DataRow + 1
+            rs.MoveNext()
+        Loop
+
+        rs.Close()
+        '*************************** end of combobox2 connection *****************************************************************
+
+        '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
+        'SQLstring = "Select DrawNo, SFOrder,CustCode CustDWG, ProcSN, ProcName, ProcDesc, Qty, ProcQty From ProcCard"
+        'SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From CardList where DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'"
+        SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_已选图号.Text & "' group by DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        DataGridView1.Columns.Clear()
+        DataGridView1.Rows.Clear()
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+
+        'rs.Open(SQLstring, cn, 1, 2)
+        rs.Open(SQLstring, cn, 1, 1)
+        If (rs.RecordCount = 0) Then
+            rs.Close()
+            cn.Close()
+            rs = Nothing
+            cn = Nothing
+            'shell(SFOrderBaseNetDisconnect, vbHide)
+            Exit Sub
+        End If
+        rs.MoveFirst()
+        For i = 1 To rs.Fields.Count
+            DataGridView1.Columns.Add(rs.Fields(i - 1).Name, rs.Fields(i - 1).Name)
+        Next
+        DataGridView1.Rows.Add(rs.RecordCount)
+
+        DataRow = 0
+        Do While rs.EOF = False
+            For i = 1 To rs.Fields.Count
+                DataGridView1.Item(i - 1, DataRow).Value = rs.Fields(i - 1).Value
+            Next i
+            DataRow = DataRow + 1
+            rs.MoveNext()
+        Loop
+
+        rs.Close()
+        cn.Close()
+        '88888888888888888888888888 end of 对应图号工艺列表结束 8888888888888888888888888888888888888888888888888888888888888888888888
+        rs = Nothing
+        cn = Nothing
+        'shell(SFOrderBaseNetDisconnect, vbHide)
+    End Sub
+
+    Private Sub ComboBox_未写工艺图号_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles ComboBox_未写工艺图号.SelectionChangeCommitted
+        DataGridView2.Rows.Clear()
+        ComboBox_已写工艺图号.SelectedItem = Nothing
+
+        If ComboBox_已写工艺图号.SelectedItem IsNot Nothing Then
+            TextBox_已选图号.Text = ComboBox_已写工艺图号.SelectedItem.ToString '已选图号
+        Else
+            If ComboBox_未写工艺图号.SelectedItem IsNot Nothing Then
+                TextBox_已选图号.Text = ComboBox_未写工艺图号.SelectedItem.ToString '已选图号
+            End If
+        End If
+
+        TextBox3.Text = TextBox_CustCode.Text + TextBox_已选图号.Text
+        TextBox_DWGInfo.Text = TextBox_CustCode.Text + TextBox_已选图号.Text + TextBox_生产单号.Text
+
+        Dim cn As New ADODB.Connection
+        Dim rs As New ADODB.Recordset
+        'Dim SQLstring As String
+        Dim SQLstring As String
+        cn.Open(CNsfmdb)
+        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=" & "'" & TextBox_已选图号.Text & "'" & "))"
+        'rs.Open(SQLstring, cn, 1, 2)
+        rs.Open(SQLstring, cn, 1, 1)
+        rs.MoveFirst()
+        TextBox6.Text = rs.Fields("Qty").Value
+        TextBox7.Text = rs.Fields("Qty").Value
+        '*************************** end of combobox2 connection *****************************************************************
+        rs.Close()
+
+        '显示当前工件的单件报价
+        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
+        rs.Open(SQLstring, cn, 1, 1)
+        Dim price As String
+        price = rs.Fields(0).Value.ToString()
+        Dim str As String
+        If String.IsNullOrEmpty(price) Then
+            str = "无报价"
+        Else
+            str = price
+        End If
+        Label_Price.Text = "当前单件报价￥：" + str
+        rs.Close()
+
+        '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
+        'SQLstring = "Select DrawNo, SFOrder,CustCode CustDWG, ProcSN, ProcName, ProcDesc, Qty, ProcQty From ProcCard"
+        'SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From CardList where DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'"
+        SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_已选图号.Text & "' group by DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        DataGridView1.Columns.Clear()
+        DataGridView1.Rows.Clear()
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+
+        'rs.Open(SQLstring, cn, 1, 2)
+        rs.Open(SQLstring, cn, 1, 1)
+        If (rs.RecordCount = 0) Then
+            rs.Close()
+            cn.Close()
+            rs = Nothing
+            cn = Nothing
+            'shell(SFOrderBaseNetDisconnect, vbHide)
+            Exit Sub
+        End If
+        rs.MoveFirst()
+        For i = 1 To rs.Fields.Count
+            DataGridView1.Columns.Add(rs.Fields(i - 1).Name, rs.Fields(i - 1).Name)
+        Next
+        DataGridView1.Rows.Add(rs.RecordCount)
+
+        Dim DataRow As Integer
+        DataRow = 0
+        Do While rs.EOF = False
+            For i = 1 To rs.Fields.Count
+                DataGridView1.Item(i - 1, DataRow).Value = rs.Fields(i - 1).Value
+            Next i
+            DataRow = DataRow + 1
+            rs.MoveNext()
+        Loop
+
+        rs.Close()
+        cn.Close()
+        '88888888888888888888888888 end of 对应图号工艺列表结束 8888888888888888888888888888888888888888888888888888888888888888888888
+        rs = Nothing
+        cn = Nothing
+        'shell(SFOrderBaseNetDisconnect, vbHide)
     End Sub
 End Class

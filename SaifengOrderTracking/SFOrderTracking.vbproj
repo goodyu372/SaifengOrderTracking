@@ -345,12 +345,6 @@
     <Compile Include="Form查询所有终检记录.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form工艺修改.Designer.vb">
-      <DependentUpon>Form工艺修改.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form工艺修改.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form下料完成记录.Designer.vb">
       <DependentUpon>Form下料完成记录.vb</DependentUpon>
     </Compile>
@@ -799,9 +793,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form查询所有终检记录.resx">
       <DependentUpon>Form查询所有终检记录.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form工艺修改.resx">
-      <DependentUpon>Form工艺修改.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form下料完成记录.resx">
       <DependentUpon>Form下料完成记录.vb</DependentUpon>

@@ -5,7 +5,7 @@
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AutoUpdater.Start("http://192.168.0.76:8013/ERPUpdater.xml")
-        StatusStrip1.Items(0).Text = "赛峰 ERP 20190306"
+        StatusStrip1.Items(0).Text = "Ver " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
         StatusStrip1.Items(2).Alignment = ToolStripItemAlignment.Right
         StatusStrip1.Items(2).Text = "          用户名：匿名"
         Me.Width = 900
@@ -188,11 +188,6 @@
     Private Sub 全部查询ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 全部查询ToolStripMenuItem.Click
         Me.Hide()
         Form查询所有终检记录.Show()
-    End Sub
-
-    Private Sub 工艺修改ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles 工艺修改ToolStripMenuItem1.Click
-        Me.Hide()
-        Form工艺修改.Show()
     End Sub
 
     Private Sub 下料完成后收料ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 下料完成后收料ToolStripMenuItem.Click
