@@ -52,7 +52,7 @@
         rs.Open(SQLstring, cn, 1, 1)
         For i = 0 To rs.Fields.Count - 1
             DataGridView2.Columns.Add(rs.Fields(i).Name, rs.Fields(i).Name)
-            If ((rs.Fields(i).Name = "ProcSN") Or (rs.Fields(i).Name = "ProcName") Or (rs.Fields(i).Name = "ProcDesc") Or (rs.Fields(i).Name = "ProcQty") Or (rs.Fields(i).Name = "PreTime") Or (rs.Fields(i).Name = "UnitTime")) Then
+            If ((rs.Fields(i).Name = "ProcSN") Or (rs.Fields(i).Name = "ProcName") Or (rs.Fields(i).Name = "ProcDesc") Or (rs.Fields(i).Name = "ProcQty") Or (rs.Fields(i).Name = "PreTime") Or (rs.Fields(i).Name = "UnitTime") Or (rs.Fields(i).Name = "该工序预计单件工时") Or (rs.Fields(i).Name = "该工序预计单件成本") Or (rs.Fields(i).Name = "该工序预计总工时") Or (rs.Fields(i).Name = "该工序预计总成本")) Then
                 DataGridView2.Columns(i).Visible = True
             Else
                 DataGridView2.Columns(i).Visible = False
@@ -128,7 +128,7 @@
             End If
             DataGridView2.Rows.Insert(DataGridView2.SelectedCells(0).RowIndex)
             DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 1).ReadOnly = False
-            DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 1).Value = Format(DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 2).Value + 1, "000")
+            DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 1).Value = DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 2).Value + 1
             'DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 1).Value = Format((DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex - 2).Value + DataGridView2.Item("ProcSN", DataGridView2.SelectedCells(0).RowIndex + 1).Value) / 2, "000")
         End If
 ErrorExit:
@@ -184,7 +184,7 @@ ErrExit:
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         On Error GoTo ErrExit
         DataGridView2.Rows.Add(1)
-        DataGridView2.Item("ProcSN", DataGridView2.Rows.Count - 1).Value = Format(DataGridView2.Item("ProcSN", DataGridView2.Rows.Count - 2).Value + 10, "000")
+        DataGridView2.Item("ProcSN", DataGridView2.Rows.Count - 1).Value = DataGridView2.Item("ProcSN", DataGridView2.Rows.Count - 2).Value + 5
 ErrExit:
     End Sub
 End Class

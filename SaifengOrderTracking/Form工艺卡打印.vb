@@ -81,7 +81,7 @@
         xlsheet.Cells(3, 22) = Mid(rs.Fields("DWGInfo").Value, 1, 4)
         Do While rs.EOF = False
             'xlsheet.Cells(RowNo, 1) = IIf(rs.Fields("ProcSN").Value >= 100, rs.Fields("ProcSN").Value, IIf(rs.Fields("ProcSN").Value < 10, "'00" & rs.Fields("ProcSN").Value, "'0" & rs.Fields("ProcSN").Value))
-            xlsheet.Cells(RowNo, 1) = "'" & Format$(Val(rs.Fields("ProcSN").Value), "000")
+            xlsheet.Cells(RowNo, 1) = "'" & Val(rs.Fields("ProcSN").Value)  '     "'" & Format$(Val(rs.Fields("ProcSN").Value), "000")
             xlsheet.Cells(RowNo, 2) = rs.Fields("ProcName").Value
             xlsheet.Cells(RowNo, 3) = rs.Fields("ProcDesc").Value
             xlsheet.Cells(RowNo, 10) = rs.Fields("PreTime").Value

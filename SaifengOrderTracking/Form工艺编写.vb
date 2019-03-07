@@ -139,6 +139,12 @@
             SQLstring = "Select * From ProcCard where DWGInfo=" & "'" & DataGridView1.Item(0, e.RowIndex).Value & "' order by ProcSN"
             'rs.Open(SQLstring, cn, 1, 2)
             rs.Open(SQLstring, cn, 1, 1)
+
+            If rs.RecordCount = 0 Then
+                MsgBox($"DWGInfo= {DataGridView1.Item(0, e.RowIndex).Value} 不存在！工艺卡中没有此记录数据！")
+                Return
+            End If
+
             DataGridView2.Rows.Add(rs.RecordCount)
 
             Dim DataRow As Integer
@@ -265,6 +271,8 @@
             str = price
         End If
 
+        rs.Close()
+
         If MsgBox($"单件报价¥{str} 预计单件成本¥:{预计单件成本} 工艺数量{Val(TextBox6.Text)} 预计总成本¥:{预计总成本}", MsgBoxStyle.OkCancel, "请确认是否无误") = MsgBoxResult.Ok Then
 
             SQLstring = "select * From ProcCard order by ID"
@@ -368,6 +376,7 @@
         '**************************************** 编写工艺列表 ************************************************************************
         DataGridView2.Columns.Add("工序号", "工序号")
         DataGridView2.Columns.Add(dd)
+        DataGridView2.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         DataGridView2.Columns.Add("工序内容和注意事项", "工序内容和注意事项")
         DataGridView2.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridView2.Columns.Add("准备工时h", "准备工时h")
