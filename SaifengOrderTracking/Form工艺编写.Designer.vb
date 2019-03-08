@@ -63,7 +63,7 @@ Partial Class Form工艺编写
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 23
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(556, 158)
+        Me.DataGridView1.Size = New System.Drawing.Size(631, 158)
         Me.DataGridView1.TabIndex = 0
         '
         'DataGridView2
@@ -76,7 +76,7 @@ Partial Class Form工艺编写
         Me.DataGridView2.Location = New System.Drawing.Point(12, 237)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 23
-        Me.DataGridView2.Size = New System.Drawing.Size(1199, 571)
+        Me.DataGridView2.Size = New System.Drawing.Size(1273, 571)
         Me.DataGridView2.TabIndex = 1
         '
         'Label1
@@ -119,7 +119,7 @@ Partial Class Form工艺编写
         'TextBox_已选图号
         '
         Me.TextBox_已选图号.Enabled = False
-        Me.TextBox_已选图号.Location = New System.Drawing.Point(724, 88)
+        Me.TextBox_已选图号.Location = New System.Drawing.Point(777, 88)
         Me.TextBox_已选图号.Name = "TextBox_已选图号"
         Me.TextBox_已选图号.Size = New System.Drawing.Size(291, 21)
         Me.TextBox_已选图号.TabIndex = 7
@@ -138,7 +138,7 @@ Partial Class Form工艺编写
         'TextBox3
         '
         Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(724, 120)
+        Me.TextBox3.Location = New System.Drawing.Point(777, 120)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(291, 21)
         Me.TextBox3.TabIndex = 9
@@ -146,7 +146,7 @@ Partial Class Form工艺编写
         'TextBox_DWGInfo
         '
         Me.TextBox_DWGInfo.Enabled = False
-        Me.TextBox_DWGInfo.Location = New System.Drawing.Point(724, 149)
+        Me.TextBox_DWGInfo.Location = New System.Drawing.Point(777, 149)
         Me.TextBox_DWGInfo.Name = "TextBox_DWGInfo"
         Me.TextBox_DWGInfo.Size = New System.Drawing.Size(291, 21)
         Me.TextBox_DWGInfo.TabIndex = 10
@@ -156,7 +156,7 @@ Partial Class Form工艺编写
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(615, 93)
+        Me.Label4.Location = New System.Drawing.Point(670, 93)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(88, 16)
         Me.Label4.TabIndex = 11
@@ -167,7 +167,7 @@ Partial Class Form工艺编写
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(615, 125)
+        Me.Label5.Location = New System.Drawing.Point(670, 125)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(88, 16)
         Me.Label5.TabIndex = 12
@@ -178,7 +178,7 @@ Partial Class Form工艺编写
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(612, 149)
+        Me.Label6.Location = New System.Drawing.Point(667, 149)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(104, 16)
         Me.Label6.TabIndex = 13
@@ -187,14 +187,14 @@ Partial Class Form工艺编写
         'TextBox_CustCode
         '
         Me.TextBox_CustCode.Enabled = False
-        Me.TextBox_CustCode.Location = New System.Drawing.Point(1132, 20)
+        Me.TextBox_CustCode.Location = New System.Drawing.Point(1200, 20)
         Me.TextBox_CustCode.Name = "TextBox_CustCode"
         Me.TextBox_CustCode.Size = New System.Drawing.Size(79, 21)
         Me.TextBox_CustCode.TabIndex = 14
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(1132, 88)
+        Me.TextBox6.Location = New System.Drawing.Point(1200, 88)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(79, 21)
         Me.TextBox6.TabIndex = 15
@@ -204,7 +204,7 @@ Partial Class Form工艺编写
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(1039, 93)
+        Me.Label7.Location = New System.Drawing.Point(1107, 93)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(88, 16)
         Me.Label7.TabIndex = 16
@@ -215,7 +215,7 @@ Partial Class Form工艺编写
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(1039, 60)
+        Me.Label8.Location = New System.Drawing.Point(1107, 60)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(104, 16)
         Me.Label8.TabIndex = 17
@@ -224,7 +224,7 @@ Partial Class Form工艺编写
         'TextBox7
         '
         Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(1132, 55)
+        Me.TextBox7.Location = New System.Drawing.Point(1200, 55)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(79, 21)
         Me.TextBox7.TabIndex = 18
@@ -233,7 +233,7 @@ Partial Class Form工艺编写
         '
         Me.Button1.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Red
-        Me.Button1.Location = New System.Drawing.Point(1042, 125)
+        Me.Button1.Location = New System.Drawing.Point(1110, 125)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(169, 39)
         Me.Button1.TabIndex = 19
@@ -251,7 +251,7 @@ Partial Class Form工艺编写
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(739, 199)
+        Me.Button5.Location = New System.Drawing.Point(833, 199)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(123, 32)
         Me.Button5.TabIndex = 28
@@ -261,7 +261,7 @@ Partial Class Form工艺编写
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button4.Location = New System.Drawing.Point(1062, 199)
+        Me.Button4.Location = New System.Drawing.Point(1156, 199)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(123, 32)
         Me.Button4.TabIndex = 27
@@ -271,7 +271,7 @@ Partial Class Form工艺编写
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(916, 199)
+        Me.Button3.Location = New System.Drawing.Point(1010, 199)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(123, 32)
         Me.Button3.TabIndex = 26
@@ -281,7 +281,7 @@ Partial Class Form工艺编写
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(580, 199)
+        Me.Button2.Location = New System.Drawing.Point(674, 199)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(123, 32)
         Me.Button2.TabIndex = 25
@@ -293,7 +293,7 @@ Partial Class Form工艺编写
         Me.Label_Price.AutoSize = True
         Me.Label_Price.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label_Price.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label_Price.Location = New System.Drawing.Point(615, 178)
+        Me.Label_Price.Location = New System.Drawing.Point(709, 178)
         Me.Label_Price.Name = "Label_Price"
         Me.Label_Price.Size = New System.Drawing.Size(101, 12)
         Me.Label_Price.TabIndex = 29
@@ -304,7 +304,7 @@ Partial Class Form工艺编写
         Me.Label_预计单件成本.AutoSize = True
         Me.Label_预计单件成本.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label_预计单件成本.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label_预计单件成本.Location = New System.Drawing.Point(829, 178)
+        Me.Label_预计单件成本.Location = New System.Drawing.Point(923, 178)
         Me.Label_预计单件成本.Name = "Label_预计单件成本"
         Me.Label_预计单件成本.Size = New System.Drawing.Size(95, 12)
         Me.Label_预计单件成本.TabIndex = 30
@@ -315,7 +315,7 @@ Partial Class Form工艺编写
         Me.Label_预计总成本.AutoSize = True
         Me.Label_预计总成本.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label_预计总成本.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label_预计总成本.Location = New System.Drawing.Point(1040, 178)
+        Me.Label_预计总成本.Location = New System.Drawing.Point(1134, 178)
         Me.Label_预计总成本.Name = "Label_预计总成本"
         Me.Label_预计总成本.Size = New System.Drawing.Size(83, 12)
         Me.Label_预计总成本.TabIndex = 31
@@ -326,7 +326,7 @@ Partial Class Form工艺编写
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(605, 60)
+        Me.Label9.Location = New System.Drawing.Point(658, 60)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(113, 12)
         Me.Label9.TabIndex = 33
@@ -335,7 +335,7 @@ Partial Class Form工艺编写
         'ComboBox_已写工艺图号
         '
         Me.ComboBox_已写工艺图号.FormattingEnabled = True
-        Me.ComboBox_已写工艺图号.Location = New System.Drawing.Point(724, 56)
+        Me.ComboBox_已写工艺图号.Location = New System.Drawing.Point(777, 56)
         Me.ComboBox_已写工艺图号.Name = "ComboBox_已写工艺图号"
         Me.ComboBox_已写工艺图号.Size = New System.Drawing.Size(291, 20)
         Me.ComboBox_已写工艺图号.TabIndex = 32
@@ -344,7 +344,7 @@ Partial Class Form工艺编写
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1233, 820)
+        Me.ClientSize = New System.Drawing.Size(1297, 820)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.ComboBox_已写工艺图号)
         Me.Controls.Add(Me.Label_预计总成本)

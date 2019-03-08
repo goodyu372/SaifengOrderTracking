@@ -32,8 +32,13 @@
             DataGridView2.Columns(i).SortMode = DataGridViewColumnSortMode.NotSortable
         Next
 
-        DataGridView2.Columns("资源名称").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        DataGridView2.Columns("工序号").Width = 30
+        DataGridView2.Columns("资源名称").Width = 130
         DataGridView2.Columns("工序内容和注意事项").AutoSizeMode = DataGridViewAutoSizeColumnsMode.Fill
+        DataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DataGridView2.Columns("准备工时h").Width = 40
+        DataGridView2.Columns("单件工时h").Width = 40
+        DataGridView2.Columns("该工序预计单件成本¥").Width = 60
 
     End Sub
 
@@ -356,7 +361,7 @@ ErrorExit:
             SQLstring = "Select DrawNo From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo not in (Select DrawNo from SFAll.dbo.ProcCard where SFOrder=" & "'" & TextBox_生产单号.Text & "')))"
             rs.Open(SQLstring, cn, 1, 1)
             If (rs.RecordCount = 0) Then
-                MsgBox("此生产单所有零件均已完成工艺！")
+                'MsgBox("此生产单所有零件均已完成工艺！")
             Else
                 rs.MoveFirst()
                 Do While Not rs.EOF
@@ -372,7 +377,7 @@ ErrorExit:
             SQLstring = "Select DrawNo From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo in (Select DrawNo from SFAll.dbo.ProcCard where SFOrder=" & "'" & TextBox_生产单号.Text & "')))"
             rs.Open(SQLstring, cn, 1, 1)
             If (rs.RecordCount = 0) Then
-                MsgBox("此生产单已完成工艺的图号记录数为0！")
+                'MsgBox("此生产单已完成工艺的图号记录数为0！")
             Else
                 rs.MoveFirst()
                 Do While Not rs.EOF
@@ -467,7 +472,7 @@ ErrorExit:
         '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
         'SQLstring = "Select DrawNo, SFOrder,CustCode CustDWG, ProcSN, ProcName, ProcDesc, Qty, ProcQty From ProcCard"
         'SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From CardList where DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'"
-        SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_已选图号.Text & "' group by DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        SQLstring = "Select ProcMaker as 工艺,ProcDate as 时间, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_已选图号.Text & "' group by DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
         DataGridView1.Columns.Clear()
         DataGridView1.Rows.Clear()
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
