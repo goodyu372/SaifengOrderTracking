@@ -254,9 +254,7 @@
             cn.Open(CNsfmdb)
 
             '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-            'SQLstring = "Select DrawNo, SFOrder,CustCode CustDWG, ProcSN, ProcName, ProcDesc, Qty, ProcQty From ProcCard"
-            SQLstring = "Select DWGInfo,CustDWG,DrawNo,Qty,CustCode From CardList where DrawNo like " & "'%" & TextBox_参考图号.Text & "%'"
-            DataGridView1.Columns.Clear()
+            SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_参考图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
             DataGridView1.Rows.Clear()
             DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 
@@ -270,11 +268,6 @@
                 'shell(SFOrderBaseNetDisconnect, vbHide)
                 Exit Sub
             End If
-            rs.MoveFirst()
-
-            For i = 1 To rs.Fields.Count
-                DataGridView1.Columns.Add(rs.Fields(i - 1).Name, rs.Fields(i - 1).Name)
-            Next
             DataGridView1.Rows.Add(rs.RecordCount)
 
             Dim DataRow As Integer
@@ -286,11 +279,12 @@
                 DataRow = DataRow + 1
                 rs.MoveNext()
             Loop
+
             rs.Close()
+            cn.Close()
             '88888888888888888888888888 end of 对应图号工艺列表结束 8888888888888888888888888888888888888888888888888888888888888888888888
             rs = Nothing
             cn = Nothing
-            'shell(SFOrderBaseNetDisconnect, vbHide)
         End If
     End Sub
 
@@ -357,7 +351,7 @@ ErrorExit:
             rs.Close()
             '*************************** end of combobox2 connection *****************************************************************
 
-
+            ComboBox_已写工艺图号.Text = ""
             ComboBox_已写工艺图号.Items.Clear()
             SQLstring = "Select DrawNo From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo in (Select DrawNo from SFAll.dbo.ProcCard where SFOrder=" & "'" & TextBox_生产单号.Text & "')))"
             rs.Open(SQLstring, cn, 1, 1)
