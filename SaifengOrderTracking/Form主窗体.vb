@@ -4,6 +4,7 @@
         Form用户登录.Show()
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AutoUpdater.Mandatory = True
         AutoUpdater.Start("http://192.168.0.76:8013/ERPUpdater.xml")
         StatusStrip1.Items(0).Text = "Ver " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
         StatusStrip1.Items(2).Alignment = ToolStripItemAlignment.Right
