@@ -49,20 +49,47 @@
         End If
     End Sub
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-        Dim cn As New ADODB.Connection
-        Dim rs As New ADODB.Recordset
-        Dim SQLstring As String
-        cn.Open(CNsfmdb)
-        'SQLstring = "Delete * from JamuStock where 编号=" & "'" & DataGridView1.Item("编号", e.RowIndex).Value & "'"
-        SQLstring = "Delete JamuStock where 编号=" & "'" & DataGridView1.Item("编号", e.RowIndex).Value & "'" & "and 图号='" & DataGridView1.Item("图号", e.RowIndex).Value & "'"
-        rs.Open(SQLstring, cn, 1, 3)
-        cn.Close()
-        rs = Nothing
-        cn = Nothing
-        DataGridView1.Rows.RemoveAt(e.RowIndex)
+        Dim ID, num, 图号, 编号 As Object
+        ID = DataGridView1.Item("ID", e.RowIndex).Value
+        num = DataGridView1.Item("数量", e.RowIndex).Value
+        图号 = DataGridView1.Item("图号", e.RowIndex).Value
+        编号 = DataGridView1.Item("编号", e.RowIndex).Value
+        If MsgBox($"图号{图号} 编号{编号} 数量{num} 确定要删除吗") = MsgBoxResult.Yes Then
+            Dim cn As New ADODB.Connection
+            Dim rs As New ADODB.Recordset
+            Dim SQLstring As String
+            cn.Open(CNsfmdb)
+            'SQLstring = "Delete * from JamuStock where 编号=" & "'" & DataGridView1.Item("编号", e.RowIndex).Value & "'"
+            SQLstring = $"Delete JamuStock where ID={ID}"
+            rs.Open(SQLstring, cn, 1, 3)
+            cn.Close()
+            rs = Nothing
+            cn = Nothing
+            DataGridView1.Rows.RemoveAt(e.RowIndex)
+            MsgBox($"图号{图号} ID{ID} 已成功删除！")
+        End If
     End Sub
 
     Private Sub Form57_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
+        Dim ID, num, 图号 As Object
+        ID = DataGridView1.Item("ID", e.RowIndex).Value
+        num = DataGridView1.Item("数量", e.RowIndex).Value
+        图号 = DataGridView1.Item("图号", e.RowIndex).Value
+        If e.ColumnIndex = 1 And e.RowIndex >= 0 And ID IsNot Nothing And num IsNot Nothing Then
+            Dim cn As New ADODB.Connection
+            Dim rs As New ADODB.Recordset
+            Dim SQLstring As String
+            cn.Open(CNsfmdb)
+            SQLstring = $"update JamuStock set 数量 = {num} where ID={ID}"
+            rs.Open(SQLstring, cn, 1, 3)
+            cn.Close()
+            rs = Nothing
+            cn = Nothing
+            MsgBox($"{图号}已成功更改数量！")
+        End If
     End Sub
 End Class

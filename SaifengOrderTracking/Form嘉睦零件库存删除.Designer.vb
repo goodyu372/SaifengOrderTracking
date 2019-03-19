@@ -32,7 +32,7 @@ Partial Class Form嘉睦零件库存删除
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
         Me.Label2.Location = New System.Drawing.Point(212, 63)
         Me.Label2.Name = "Label2"
@@ -43,7 +43,7 @@ Partial Class Form嘉睦零件库存删除
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label1.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Location = New System.Drawing.Point(43, 23)
         Me.Label1.Name = "Label1"
@@ -53,7 +53,7 @@ Partial Class Form嘉睦零件库存删除
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(286, 23)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(166, 29)
@@ -71,7 +71,7 @@ Partial Class Form嘉睦零件库存删除
         Me.DataGridView1.Size = New System.Drawing.Size(682, 310)
         Me.DataGridView1.TabIndex = 4
         '
-        'Form57
+        'Form嘉睦零件库存删除
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -80,7 +80,7 @@ Partial Class Form嘉睦零件库存删除
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "Form57"
+        Me.Name = "Form嘉睦零件库存删除"
         Me.Text = "赛峰 ERP -- 嘉睦零件库存删除"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

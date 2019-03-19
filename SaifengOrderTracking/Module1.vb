@@ -128,7 +128,7 @@
                 Form主窗体.品质部终检记录ToolStripMenuItem.Visible = False
                 Form主窗体.查询价格ToolStripMenuItem2.Enabled = True
             Case "manager"
-                Form主窗体.OrderInputMenuItem.Visible = False
+                Form主窗体.OrderInputMenuItem.Visible = True
                 Form主窗体.OrderScanMenuItem.Visible = False
                 Form主窗体.ProcessInputMenuItem.Visible = False
                 Form主窗体.UserAdminToolStripMenuItem.Visible = True
@@ -140,12 +140,12 @@
                 Form主窗体.客户清单ToolStripMenuItem1.Visible = False
                 Form主窗体.员工信息查看ToolStripMenuItem1.Visible = False
                 Form主窗体.更改图号ToolStripMenuItem.Visible = False
-                Form主窗体.更新价格ToolStripMenuItem.Visible = False
+                Form主窗体.更新价格ToolStripMenuItem.Visible = True
                 Form主窗体.取消工艺ToolStripMenuItem.Visible = False
                 Form主窗体.删除出货记录ToolStripMenuItem.Visible = False
                 Form主窗体.删除订单项ToolStripMenuItem.Visible = False
-                Form主窗体.查询图纸ToolStripMenuItem.Visible = False
-                Form主窗体.系统图纸清单ToolStripMenuItem.Visible = False
+                Form主窗体.查询图纸ToolStripMenuItem.Visible = True
+                Form主窗体.系统图纸清单ToolStripMenuItem.Visible = True
                 Form主窗体.查询价格ToolStripMenuItem2.Enabled = True
                 Form主窗体.Width = 1400
             Case "scan"
