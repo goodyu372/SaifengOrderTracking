@@ -54,7 +54,7 @@
         num = DataGridView1.Item("数量", e.RowIndex).Value
         图号 = DataGridView1.Item("图号", e.RowIndex).Value
         编号 = DataGridView1.Item("编号", e.RowIndex).Value
-        If MsgBox($"图号{图号} 编号{编号} 数量{num} 确定要删除吗") = MsgBoxResult.Yes Then
+        If MsgBox($"图号{图号} 编号{编号} 数量{num} 确定要删除吗", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
             Dim cn As New ADODB.Connection
             Dim rs As New ADODB.Recordset
             Dim SQLstring As String
