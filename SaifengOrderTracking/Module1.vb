@@ -115,6 +115,7 @@
                 Form主窗体.ToolStripMenuItem1.Visible = False
                 Form主窗体.品质部终检记录ToolStripMenuItem.Visible = False
                 Form主窗体.查询价格ToolStripMenuItem2.Enabled = True
+                Form主窗体.SystemInfoToolStripMenuItem.Visible = True
             Case "plan"
                 Form主窗体.OrderInputMenuItem.Visible = False
                 'Form1.OrderScanMenuItem.Visible = True
