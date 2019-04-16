@@ -64,8 +64,11 @@ Partial Class Form工艺编写
         Me.Label_预计总成本 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ComboBox_已写工艺图号 = New System.Windows.Forms.ComboBox()
+        Me.说明 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.说明.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -126,10 +129,10 @@ Partial Class Form工艺编写
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.工序号, Me.资源名称, Me.工序内容和注意事项, Me.准备工时h, Me.单件工时h, Me.该工序预计单件成本})
         Me.DataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DataGridView2.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.DataGridView2.Location = New System.Drawing.Point(12, 237)
+        Me.DataGridView2.Location = New System.Drawing.Point(12, 314)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 23
-        Me.DataGridView2.Size = New System.Drawing.Size(1273, 571)
+        Me.DataGridView2.Size = New System.Drawing.Size(1273, 494)
         Me.DataGridView2.TabIndex = 1
         '
         '工序号
@@ -335,7 +338,7 @@ Partial Class Form工艺编写
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(833, 199)
+        Me.Button5.Location = New System.Drawing.Point(832, 193)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(123, 32)
         Me.Button5.TabIndex = 28
@@ -345,7 +348,7 @@ Partial Class Form工艺编写
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button4.Location = New System.Drawing.Point(1156, 199)
+        Me.Button4.Location = New System.Drawing.Point(1156, 193)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(123, 32)
         Me.Button4.TabIndex = 27
@@ -355,7 +358,7 @@ Partial Class Form工艺编写
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(1010, 199)
+        Me.Button3.Location = New System.Drawing.Point(1002, 193)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(123, 32)
         Me.Button3.TabIndex = 26
@@ -365,7 +368,7 @@ Partial Class Form工艺编写
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(674, 199)
+        Me.Button2.Location = New System.Drawing.Point(672, 193)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(123, 32)
         Me.Button2.TabIndex = 25
@@ -424,11 +427,35 @@ Partial Class Form工艺编写
         Me.ComboBox_已写工艺图号.Size = New System.Drawing.Size(291, 20)
         Me.ComboBox_已写工艺图号.TabIndex = 32
         '
+        '说明
+        '
+        Me.说明.Controls.Add(Me.TextBox1)
+        Me.说明.Location = New System.Drawing.Point(12, 226)
+        Me.说明.Name = "说明"
+        Me.说明.Size = New System.Drawing.Size(1267, 82)
+        Me.说明.TabIndex = 34
+        Me.说明.TabStop = False
+        Me.说明.Text = "说明"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(3, 17)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(1261, 62)
+        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = "1. 简单工件不建议上CNC，不划算，超鸿的零件绝大部分是铝件，难度一般，建议压铣床，没难度的甚至可以不写工艺" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 有时候报价低是为了配合客户好以后拿单，谁都" &
+    "想报价高，但报高价人家给不给你又是另一说" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. 原则上批量件报价时业务部和工艺都一同审审看最好，不要亏得裤子都没了，第2点和第3点会出现分歧矛盾的时候，冷静下" &
+    "来多思考思考对方的立场。 顺祝！"
+        '
         'Form工艺编写
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1297, 820)
+        Me.Controls.Add(Me.说明)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.ComboBox_已写工艺图号)
         Me.Controls.Add(Me.Label_预计总成本)
@@ -463,6 +490,8 @@ Partial Class Form工艺编写
         Me.Text = "赛峰生产单跟进系统--工艺编写"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.说明.ResumeLayout(False)
+        Me.说明.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -509,4 +538,6 @@ Partial Class Form工艺编写
     Friend WithEvents DrawNo As DataGridViewTextBoxColumn
     Friend WithEvents Qty As DataGridViewTextBoxColumn
     Friend WithEvents CustCode As DataGridViewTextBoxColumn
+    Friend WithEvents 说明 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
