@@ -69,7 +69,7 @@
             Dim SQLstring As String
             Dim SFOrder, DrawNo As String
             SFOrder = Mid(TextBox2.Text, 1, 5)
-            DrawNo = Mid(TextBox2.Text, 6, Len(TextBox2.Text) - 8)
+            DrawNo = Mid(TextBox2.Text, 6, Len(TextBox2.Text) - 7)
             SQLstring = "Select * from SFOrderBase where SFOrder=" & "'" & SFOrder & "' and DrawNo=" & "'" & DrawNo & "'"
             cn.Open(CNsfmdb)
             'rs.Open(SQLstring, cn, 1, 2)
