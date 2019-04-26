@@ -54,10 +54,6 @@
             MsgBox("没有入库记录！")
             Exit Sub
         End If
-        If DataGridView1.Rows.Count > 20 Then
-            MsgBox("不要把入库查询记录误入库！")
-            Exit Sub
-        End If
         For i = 0 To DataGridView1.Rows.Count - 2
             If (IsNumeric(DataGridView1.Item("数量", DataGridView1.Rows.Count - 2).Value)) Then
             Else
