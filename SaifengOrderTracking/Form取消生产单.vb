@@ -122,10 +122,10 @@
                 rs.Fields("Status").Value = "取消生产单"
                 rs.Fields("Comment").Value = DataGridView2.Item("Comment", RowNo).Value
                 rs.Update()
-                RowNo = RowNo + 1
                 rs.MoveNext()
             Loop
             rs.Close()
+            RowNo = RowNo + 1
         Next
         cn.Close()
         rs = Nothing
