@@ -137,11 +137,6 @@
         Me.Hide()
         Form工艺编写.Show()
     End Sub
-    Private Sub 工艺卡处理ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles 工艺卡处理ToolStripMenuItem1.Click
-        '以下用于工艺卡处理--Excel输入
-        Form工艺流程卡处理.Show()
-        Me.Hide()
-    End Sub
     Private Sub 打印工艺卡ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 打印工艺卡ToolStripMenuItem.Click
         Me.Hide()
         Form工艺卡打印.Show()

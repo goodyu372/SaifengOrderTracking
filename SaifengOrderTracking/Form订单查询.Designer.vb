@@ -22,7 +22,7 @@ Partial Class Form订单查询
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.未完成工艺卡订单查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.订单状态查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +69,7 @@ Partial Class Form订单查询
         '
         '未完成工艺卡订单查询ToolStripMenuItem
         '
-        Me.未完成工艺卡订单查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.未完成工艺卡订单查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.未完成工艺卡订单查询ToolStripMenuItem.Name = "未完成工艺卡订单查询ToolStripMenuItem"
         Me.未完成工艺卡订单查询ToolStripMenuItem.Size = New System.Drawing.Size(182, 25)
         Me.未完成工艺卡订单查询ToolStripMenuItem.Text = "未完成工艺卡订单查询"
@@ -77,49 +77,49 @@ Partial Class Form订单查询
         '
         '订单状态查询ToolStripMenuItem
         '
-        Me.订单状态查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.订单状态查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.订单状态查询ToolStripMenuItem.Name = "订单状态查询ToolStripMenuItem"
         Me.订单状态查询ToolStripMenuItem.Size = New System.Drawing.Size(118, 25)
         Me.订单状态查询ToolStripMenuItem.Text = "订单状态查询"
         '
         '按生产单号查询零件生状况ToolStripMenuItem
         '
-        Me.按生产单号查询零件生状况ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.按生产单号查询零件生状况ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.按生产单号查询零件生状况ToolStripMenuItem.Name = "按生产单号查询零件生状况ToolStripMenuItem"
         Me.按生产单号查询零件生状况ToolStripMenuItem.Size = New System.Drawing.Size(214, 25)
         Me.按生产单号查询零件生状况ToolStripMenuItem.Text = "按生产单号查询零件生状况"
         '
         '按客户查询ToolStripMenuItem
         '
-        Me.按客户查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.按客户查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.按客户查询ToolStripMenuItem.Name = "按客户查询ToolStripMenuItem"
         Me.按客户查询ToolStripMenuItem.Size = New System.Drawing.Size(102, 25)
         Me.按客户查询ToolStripMenuItem.Text = "按客户查询"
         '
         '图号信息查看ToolStripMenuItem
         '
-        Me.图号信息查看ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.图号信息查看ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.图号信息查看ToolStripMenuItem.Name = "图号信息查看ToolStripMenuItem"
         Me.图号信息查看ToolStripMenuItem.Size = New System.Drawing.Size(118, 25)
         Me.图号信息查看ToolStripMenuItem.Text = "图号信息查看"
         '
         '扫描记录ToolStripMenuItem
         '
-        Me.扫描记录ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.扫描记录ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.扫描记录ToolStripMenuItem.Name = "扫描记录ToolStripMenuItem"
         Me.扫描记录ToolStripMenuItem.Size = New System.Drawing.Size(86, 25)
         Me.扫描记录ToolStripMenuItem.Text = "扫描记录"
         '
         '工序已完成查询ToolStripMenuItem
         '
-        Me.工序已完成查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.工序已完成查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.工序已完成查询ToolStripMenuItem.Name = "工序已完成查询ToolStripMenuItem"
         Me.工序已完成查询ToolStripMenuItem.Size = New System.Drawing.Size(134, 25)
         Me.工序已完成查询ToolStripMenuItem.Text = "工序已完成查询"
         '
         '工序已收料查询ToolStripMenuItem
         '
-        Me.工序已收料查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.工序已收料查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.工序已收料查询ToolStripMenuItem.Name = "工序已收料查询ToolStripMenuItem"
         Me.工序已收料查询ToolStripMenuItem.Size = New System.Drawing.Size(134, 25)
         Me.工序已收料查询ToolStripMenuItem.Text = "工序已收料查询"
@@ -127,7 +127,7 @@ Partial Class Form订单查询
         '未完成零件查询ToolStripMenuItem
         '
         Me.未完成零件查询ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.按单号查询ToolStripMenuItem, Me.按图号查询ToolStripMenuItem, Me.按客户查询ToolStripMenuItem1, Me.按交期查询ToolStripMenuItem, Me.所有未完成查询ToolStripMenuItem, Me.非嘉睦未完成查询ToolStripMenuItem})
-        Me.未完成零件查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.未完成零件查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.未完成零件查询ToolStripMenuItem.Name = "未完成零件查询ToolStripMenuItem"
         Me.未完成零件查询ToolStripMenuItem.Size = New System.Drawing.Size(134, 25)
         Me.未完成零件查询ToolStripMenuItem.Text = "未完成零件查询"
@@ -170,7 +170,7 @@ Partial Class Form订单查询
         '
         '外发记录查询ToolStripMenuItem
         '
-        Me.外发记录查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.外发记录查询ToolStripMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.外发记录查询ToolStripMenuItem.Name = "外发记录查询ToolStripMenuItem"
         Me.外发记录查询ToolStripMenuItem.Size = New System.Drawing.Size(118, 25)
         Me.外发记录查询ToolStripMenuItem.Text = "外发记录查询"
@@ -181,14 +181,14 @@ Partial Class Form订单查询
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(21, 101)
@@ -231,7 +231,7 @@ Partial Class Form订单查询
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label1.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Location = New System.Drawing.Point(28, 56)
         Me.Label1.Name = "Label1"
@@ -242,7 +242,7 @@ Partial Class Form订单查询
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Red
         Me.TextBox1.Location = New System.Drawing.Point(738, 40)
         Me.TextBox1.Name = "TextBox1"
@@ -254,7 +254,7 @@ Partial Class Form订单查询
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
         Me.Label2.Location = New System.Drawing.Point(559, 44)
         Me.Label2.Name = "Label2"
@@ -265,7 +265,7 @@ Partial Class Form订单查询
         '
         'ComboBox1
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("SimSun", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.IntegralHeight = False
         Me.ComboBox1.Location = New System.Drawing.Point(176, 21)
@@ -277,7 +277,7 @@ Partial Class Form订单查询
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("SimSun", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label3.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(6, 22)
         Me.Label3.Name = "Label3"
@@ -302,11 +302,11 @@ Partial Class Form订单查询
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 29)
         Me.Button1.TabIndex = 9
-        Me.Button1.Text = "汇总图纸"
+        Me.Button1.Text = "汇总拷贝图纸到本地"
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
-        'Form4
+        'Form订单查询
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -321,7 +321,7 @@ Partial Class Form订单查询
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.Name = "Form4"
+        Me.Name = "Form订单查询"
         Me.Text = "订单查询"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

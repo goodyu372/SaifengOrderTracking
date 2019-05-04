@@ -41,7 +41,7 @@ Partial Class Form个人加工详单
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("SimSun", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label1.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(40, 19)
         Me.Label1.Name = "Label1"
@@ -49,14 +49,14 @@ Partial Class Form个人加工详单
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Label1"
         '
-        'Form79
+        'Form个人加工详单
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1061, 547)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "Form79"
+        Me.Name = "Form个人加工详单"
         Me.Text = "赛峰 ERP -- 个人加工详单"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

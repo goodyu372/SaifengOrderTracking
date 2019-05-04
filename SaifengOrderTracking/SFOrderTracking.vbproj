@@ -243,12 +243,6 @@
     <Compile Include="Form未分发及未收回图纸查询.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form工艺流程卡处理.Designer.vb">
-      <DependentUpon>Form工艺流程卡处理.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form工艺流程卡处理.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form用户查询.Designer.vb">
       <DependentUpon>Form用户查询.vb</DependentUpon>
     </Compile>
@@ -561,12 +555,6 @@
     <Compile Include="Form收料扫描.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form删除订单项2.Designer.vb">
-      <DependentUpon>Form删除订单项2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form删除订单项2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form按客户月出货查询.Designer.vb">
       <DependentUpon>Form按客户月出货查询.vb</DependentUpon>
     </Compile>
@@ -621,12 +609,6 @@
     <Compile Include="Form工艺卡打印.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form工序卡信息查询.Designer.vb">
-      <DependentUpon>Form工序卡信息查询.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form工序卡信息查询.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form员工离职录入.Designer.vb">
       <DependentUpon>Form员工离职录入.vb</DependentUpon>
     </Compile>
@@ -661,12 +643,6 @@
       <DependentUpon>Form嘉睦出货记录更改.vb</DependentUpon>
     </Compile>
     <Compile Include="Form嘉睦出货记录更改.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form按单号图号更新价格.Designer.vb">
-      <DependentUpon>Form按单号图号更新价格.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form按单号图号更新价格.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form跟单备注.Designer.vb">
@@ -741,10 +717,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form未分发及未收回图纸查询.resx">
       <DependentUpon>Form未分发及未收回图纸查询.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form工艺流程卡处理.resx">
-      <DependentUpon>Form工艺流程卡处理.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form用户查询.resx">
       <DependentUpon>Form用户查询.vb</DependentUpon>
@@ -904,9 +876,6 @@
     <EmbeddedResource Include="Form收料扫描.resx">
       <DependentUpon>Form收料扫描.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form删除订单项2.resx">
-      <DependentUpon>Form删除订单项2.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form按客户月出货查询.resx">
       <DependentUpon>Form按客户月出货查询.vb</DependentUpon>
     </EmbeddedResource>
@@ -934,9 +903,6 @@
     <EmbeddedResource Include="Form工艺卡打印.resx">
       <DependentUpon>Form工艺卡打印.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form工序卡信息查询.resx">
-      <DependentUpon>Form工序卡信息查询.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form员工离职录入.resx">
       <DependentUpon>Form员工离职录入.vb</DependentUpon>
     </EmbeddedResource>
@@ -954,9 +920,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form嘉睦出货记录更改.resx">
       <DependentUpon>Form嘉睦出货记录更改.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form按单号图号更新价格.resx">
-      <DependentUpon>Form按单号图号更新价格.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form跟单备注.resx">
       <DependentUpon>Form跟单备注.vb</DependentUpon>

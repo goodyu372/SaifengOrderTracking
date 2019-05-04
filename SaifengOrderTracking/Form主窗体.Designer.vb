@@ -54,7 +54,6 @@ Partial Class Form主窗体
         Me.增加用户ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcessInputMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.工艺编制ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.工艺卡处理ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.打印工艺卡ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.分类查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -309,20 +308,20 @@ Partial Class Form主窗体
         '用户查询ToolStripMenuItem
         '
         Me.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem"
-        Me.用户查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.用户查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.用户查询ToolStripMenuItem.Text = "用户查询"
         Me.用户查询ToolStripMenuItem.Visible = False
         '
         '增加用户ToolStripMenuItem
         '
         Me.增加用户ToolStripMenuItem.Name = "增加用户ToolStripMenuItem"
-        Me.增加用户ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.增加用户ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.增加用户ToolStripMenuItem.Text = "用户增加"
         Me.增加用户ToolStripMenuItem.Visible = False
         '
         'ProcessInputMenuItem
         '
-        Me.ProcessInputMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工艺编制ToolStripMenuItem1, Me.工艺卡处理ToolStripMenuItem1, Me.打印工艺卡ToolStripMenuItem1})
+        Me.ProcessInputMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工艺编制ToolStripMenuItem1, Me.打印工艺卡ToolStripMenuItem1})
         Me.ProcessInputMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ProcessInputMenuItem.Name = "ProcessInputMenuItem"
         Me.ProcessInputMenuItem.Size = New System.Drawing.Size(86, 25)
@@ -334,13 +333,6 @@ Partial Class Form主窗体
         Me.工艺编制ToolStripMenuItem1.Name = "工艺编制ToolStripMenuItem1"
         Me.工艺编制ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
         Me.工艺编制ToolStripMenuItem1.Text = "工艺编制"
-        '
-        '工艺卡处理ToolStripMenuItem1
-        '
-        Me.工艺卡处理ToolStripMenuItem1.Name = "工艺卡处理ToolStripMenuItem1"
-        Me.工艺卡处理ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
-        Me.工艺卡处理ToolStripMenuItem1.Text = "工艺卡处理"
-        Me.工艺卡处理ToolStripMenuItem1.Visible = False
         '
         '打印工艺卡ToolStripMenuItem1
         '
@@ -627,19 +619,19 @@ Partial Class Form主窗体
         '返工记录输入ToolStripMenuItem
         '
         Me.返工记录输入ToolStripMenuItem.Name = "返工记录输入ToolStripMenuItem"
-        Me.返工记录输入ToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
+        Me.返工记录输入ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.返工记录输入ToolStripMenuItem.Text = "返工记录输入"
         '
         '返工收回QAToolStripMenuItem
         '
         Me.返工收回QAToolStripMenuItem.Name = "返工收回QAToolStripMenuItem"
-        Me.返工收回QAToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
+        Me.返工收回QAToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.返工收回QAToolStripMenuItem.Text = "返工收回QA"
         '
         '查询返工记录ToolStripMenuItem
         '
         Me.查询返工记录ToolStripMenuItem.Name = "查询返工记录ToolStripMenuItem"
-        Me.查询返工记录ToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
+        Me.查询返工记录ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.查询返工记录ToolStripMenuItem.Text = "查询返工记录"
         '
         '工时查询ToolStripMenuItem
@@ -905,7 +897,6 @@ Partial Class Form主窗体
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents 未处理图纸查询ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 工艺编制ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 工艺卡处理ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 打印工艺卡ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
