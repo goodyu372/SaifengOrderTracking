@@ -502,7 +502,7 @@ ErrorExit:
         'Dim SQLstring As String
         Dim SQLstring As String
         cn.Open(CNsfmdb)
-        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=" & "'" & TextBox_已选图号.Text & "'" & "))"
+        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=N'" & TextBox_已选图号.Text & "'" & "))"
         'rs.Open(SQLstring, cn, 1, 2)
         rs.Open(SQLstring, cn, 1, 1)
         rs.MoveFirst()
@@ -512,7 +512,7 @@ ErrorExit:
         rs.Close()
 
         '显示当前工件的单件报价
-        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
+        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo=N'" + TextBox_已选图号.Text + "'"
         rs.Open(SQLstring, cn, 1, 1)
         Dim price As String
         price = rs.Fields(0).Value.ToString()
@@ -526,7 +526,7 @@ ErrorExit:
         rs.Close()
 
         '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-        SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
         DataGridView1.Rows.Clear()
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 
