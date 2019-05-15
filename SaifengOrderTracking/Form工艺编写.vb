@@ -35,7 +35,7 @@
             Dim SQLstring, DWGinfo As String
             DWGinfo = DataGridView1.Item(2, e.RowIndex).Value
             cn.Open(CNsfmdb)
-            SQLstring = "Select * From ProcCard where DWGInfo=" & "'" & DWGinfo & "' order by ProcSN"
+            SQLstring = "Select * From ProcCard where DWGInfo=N'" & DWGinfo & "' order by ProcSN"
             'rs.Open(SQLstring, cn, 1, 2)
             rs.Open(SQLstring, cn, 1, 1)
             If rs.RecordCount = 0 Then
@@ -254,7 +254,7 @@
             cn.Open(CNsfmdb)
 
             '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-            SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_参考图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+            SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_参考图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
             DataGridView1.Rows.Clear()
             DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 
@@ -396,7 +396,7 @@ ErrorExit:
         'Dim SQLstring As String
         Dim SQLstring As String
         cn.Open(CNsfmdb)
-        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=" & "'" & TextBox_已选图号.Text & "'" & "))"
+        SQLstring = "Select * From SFOrderBase where ((SFOrder=" & "'" & TextBox_生产单号.Text & "'" & ") and (DrawNo=N'" & TextBox_已选图号.Text & "'" & "))"
         'rs.Open(SQLstring, cn, 1, 2)
         rs.Open(SQLstring, cn, 1, 1)
         rs.MoveFirst()
@@ -406,7 +406,7 @@ ErrorExit:
         rs.Close()
 
         '显示当前工件的单件报价
-        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo='" + TextBox_已选图号.Text + "'"
+        SQLstring = "Select UnitP from SFOrderBase where SFOrder=" & "'" & TextBox_生产单号.Text & "' and DrawNo=N'" + TextBox_已选图号.Text + "'"
         rs.Open(SQLstring, cn, 1, 1)
         Dim price As String
         price = rs.Fields(0).Value.ToString()
@@ -420,7 +420,7 @@ ErrorExit:
         rs.Close()
 
         '显示当前已写的工艺列表
-        SQLstring = "Select * From ProcCard where DWGInfo=" & "'" & TextBox_DWGInfo.Text & "' order by ProcSN"
+        SQLstring = "Select * From ProcCard where DWGInfo=N'" & TextBox_DWGInfo.Text & "' order by ProcSN"
         'rs.Open(SQLstring, cn, 1, 2)
         rs.Open(SQLstring, cn, 1, 1)
 
@@ -449,7 +449,7 @@ ErrorExit:
         '*************************** end of combobox2 connection *****************************************************************
 
         '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-        SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=" & "'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
         DataGridView1.Rows.Clear()
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 
