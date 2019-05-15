@@ -41,7 +41,7 @@
         Dim CustCode As String
         Dim QueryText As String
         TextBox1.Text = ComboBox1.SelectedItem.ToString
-        QueryText = "Select * from ProcCard where(( SFOrder=" & "'" & TextBox1.Text & "'" & ") and (DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'" & ")) order by ProcSN"
+        QueryText = "Select * from ProcCard where(( SFOrder=" & "'" & TextBox1.Text & "'" & ") and (DrawNo=N'" & ComboBox2.SelectedItem.ToString & "'" & ")) order by ProcSN"
         cn.Open(CNsfmdb)
         'rs.Open(QueryText, cn, 1, 2)
         rs.Open(QueryText, cn, 1, 1)
@@ -92,7 +92,7 @@
             rs.MoveNext()
         Loop
         rs.Close()
-        QueryText = "Select * from SFOrderBase where(( SFOrder=" & "'" & ComboBox1.SelectedItem.ToString & "'" & ") and (DrawNo=" & "'" & ComboBox2.SelectedItem.ToString & "'" & "))"
+        QueryText = "Select * from SFOrderBase where(( SFOrder=" & "'" & ComboBox1.SelectedItem.ToString & "'" & ") and (DrawNo=N'" & ComboBox2.SelectedItem.ToString & "'" & "))"
         'rs.Open(QueryText, cn, 1, 2)
         rs.Open(QueryText, cn, 1, 1)
         rs.MoveFirst()
