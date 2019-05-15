@@ -181,7 +181,7 @@
         rs.Update()
         rs.Close()
         '888888888888888888888888888888 更新订单状况 status 8888888888888888888888888888888888888888888
-        SQLstring = "Select * from SFOrderBase where DWGInfo=" & "'" & TextBox10.Text & "'"
+        SQLstring = "Select * from SFOrderBase where DWGInfo=N'" & TextBox10.Text & "'"
         rs.Open(SQLstring, cn, 1, 3)
         If rs.RecordCount = 0 Then
         Else

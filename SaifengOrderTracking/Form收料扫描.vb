@@ -201,7 +201,7 @@
             DWGInfo = DataGridView1.Item("DWGInfo", i).Value
             'cn.Open(CNsfmdb)
             'SQLstring = "Select * from SFOrderBase where DWGInfo=" & "'" & DWGInfo & "'"
-            SQLstring = "Select * from SFOrderBase where DWGInfo like " & "'%" & DWGInfo & "%'"
+            SQLstring = "Select * from SFOrderBase where DWGInfo like N'%" & DWGInfo & "%'"
             'rs.Open(SQLstring, cn, 1, 2)
             rs.Open(SQLstring, cn, 1, 3)
             rs.MoveFirst()
