@@ -85,7 +85,7 @@
 
             On Error Resume Next
 
-            SQLstring = "Select * from ProcCard where ProcCode=" & "'" & (TextBox2.Text) & "'"
+            SQLstring = "Select * from ProcCard where ProcCode=N'" & (TextBox2.Text) & "'"
             cn.Open(CNsfmdb)
             'rs.Open(SQLstring, cn, 1, 2)
             rs.Open(SQLstring, cn, 1, 1)

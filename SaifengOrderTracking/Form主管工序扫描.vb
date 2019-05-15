@@ -7,7 +7,7 @@
             Dim SQLstring, CNString As String
             On Error Resume Next
 
-            SQLstring = "Select * From ProcCard where ProcCode=" & "'" & (TextBox1.Text) & "'"
+            SQLstring = "Select * From ProcCard where ProcCode=N'" & (TextBox1.Text) & "'"
             cn.Open(CNsfmdb)
             rs.Open(SQLstring, cn, 1, 1)
             If (rs.RecordCount = 0) Then
