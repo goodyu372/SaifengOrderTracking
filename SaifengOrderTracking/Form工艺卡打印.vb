@@ -59,8 +59,9 @@
         If Dir(TempDataPath, vbDirectory) = "" Then
             MkDir(TempDataPath)
         End If
-        Dim PrintCardTemp As String
-        PrintCardTemp = TempDataPath & TextBox1.Text & TextBox2.Text & ".xlsx"
+        Dim PrintCardTemp, temp As String
+        temp = TextBox2.Text.Replace("*", "").Replace("\", "").Replace("/", "").Replace(":", "").Replace("?", "").Replace("<", "").Replace(">", "").Replace("|", "")
+        PrintCardTemp = TempDataPath & TextBox1.Text & temp & ".xlsx"
         If (IO.File.Exists(PrintCardTemp)) Then
             IO.File.Delete(PrintCardTemp)
         End If
