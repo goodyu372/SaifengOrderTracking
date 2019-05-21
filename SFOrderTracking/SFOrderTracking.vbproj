@@ -950,7 +950,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="SFOrderTracking_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="VBIDE">
