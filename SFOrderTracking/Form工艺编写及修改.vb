@@ -449,7 +449,7 @@ ErrorExit:
         '*************************** end of combobox2 connection *****************************************************************
 
         '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-        SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        SQLstring = "Select ProcMaker ,ProcDate, SFOrder,DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,SFOrder,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
         DataGridView1.Rows.Clear()
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 
@@ -526,7 +526,7 @@ ErrorExit:
         rs.Close()
 
         '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-        SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+        SQLstring = "Select ProcMaker ,ProcDate, SFOrder,DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_已选图号.Text & "' group by ProcMaker,ProcDate,SFOrder,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
         DataGridView1.Rows.Clear()
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 

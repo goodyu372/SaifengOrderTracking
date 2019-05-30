@@ -23,13 +23,6 @@ Partial Class Form工艺编写及修改
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.工艺制作 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.工艺时间记录 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DWGInfo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustDWG = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DrawNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.工序号 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.资源名称 = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -66,6 +59,14 @@ Partial Class Form工艺编写及修改
         Me.ComboBox_已写工艺图号 = New System.Windows.Forms.ComboBox()
         Me.说明 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.工艺制作 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.工艺时间记录 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SF订单号 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DWGInfo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustDWG = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DrawNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.说明.SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class Form工艺编写及修改
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.工艺制作, Me.工艺时间记录, Me.DWGInfo, Me.CustDWG, Me.DrawNo, Me.Qty, Me.CustCode})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.工艺制作, Me.工艺时间记录, Me.SF订单号, Me.DWGInfo, Me.CustDWG, Me.DrawNo, Me.Qty, Me.CustCode})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 62)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
@@ -82,44 +83,6 @@ Partial Class Form工艺编写及修改
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(631, 158)
         Me.DataGridView1.TabIndex = 0
-        '
-        '工艺制作
-        '
-        Me.工艺制作.HeaderText = "工艺制作"
-        Me.工艺制作.Name = "工艺制作"
-        Me.工艺制作.Width = 80
-        '
-        '工艺时间记录
-        '
-        Me.工艺时间记录.HeaderText = "工艺时间记录"
-        Me.工艺时间记录.Name = "工艺时间记录"
-        '
-        'DWGInfo
-        '
-        Me.DWGInfo.HeaderText = "DWGInfo"
-        Me.DWGInfo.Name = "DWGInfo"
-        '
-        'CustDWG
-        '
-        Me.CustDWG.HeaderText = "CustDWG"
-        Me.CustDWG.Name = "CustDWG"
-        '
-        'DrawNo
-        '
-        Me.DrawNo.HeaderText = "图号"
-        Me.DrawNo.Name = "DrawNo"
-        '
-        'Qty
-        '
-        Me.Qty.HeaderText = "数量"
-        Me.Qty.Name = "Qty"
-        Me.Qty.Width = 60
-        '
-        'CustCode
-        '
-        Me.CustCode.HeaderText = "客户号"
-        Me.CustCode.Name = "CustCode"
-        Me.CustCode.Width = 70
         '
         'DataGridView2
         '
@@ -450,7 +413,50 @@ Partial Class Form工艺编写及修改
     "想报价高，但报高价人家给不给你又是另一说" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. 原则上批量件报价时业务部和工艺都一同审审看最好，不要亏得裤子都没了，第2点和第3点会出现分歧矛盾的时候，冷静下" &
     "来多思考思考对方的立场。 顺祝！"
         '
-        'Form工艺编写
+        '工艺制作
+        '
+        Me.工艺制作.HeaderText = "工艺制作"
+        Me.工艺制作.Name = "工艺制作"
+        Me.工艺制作.Width = 80
+        '
+        '工艺时间记录
+        '
+        Me.工艺时间记录.HeaderText = "工艺时间记录"
+        Me.工艺时间记录.Name = "工艺时间记录"
+        '
+        'SF订单号
+        '
+        Me.SF订单号.HeaderText = "SF订单号"
+        Me.SF订单号.Name = "SF订单号"
+        '
+        'DWGInfo
+        '
+        Me.DWGInfo.HeaderText = "DWGInfo"
+        Me.DWGInfo.Name = "DWGInfo"
+        '
+        'CustDWG
+        '
+        Me.CustDWG.HeaderText = "CustDWG"
+        Me.CustDWG.Name = "CustDWG"
+        '
+        'DrawNo
+        '
+        Me.DrawNo.HeaderText = "图号"
+        Me.DrawNo.Name = "DrawNo"
+        '
+        'Qty
+        '
+        Me.Qty.HeaderText = "数量"
+        Me.Qty.Name = "Qty"
+        Me.Qty.Width = 60
+        '
+        'CustCode
+        '
+        Me.CustCode.HeaderText = "客户号"
+        Me.CustCode.Name = "CustCode"
+        Me.CustCode.Width = 70
+        '
+        'Form工艺编写及修改
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -486,8 +492,8 @@ Partial Class Form工艺编写及修改
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
-        Me.Name = "Form工艺编写"
-        Me.Text = "赛峰生产单跟进系统--工艺编写"
+        Me.Name = "Form工艺编写及修改"
+        Me.Text = "赛峰生产单跟进系统--工艺编写及修改"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.说明.ResumeLayout(False)
@@ -531,13 +537,14 @@ Partial Class Form工艺编写及修改
     Friend WithEvents 准备工时h As DataGridViewTextBoxColumn
     Friend WithEvents 单件工时h As DataGridViewTextBoxColumn
     Friend WithEvents 该工序预计单件成本 As DataGridViewTextBoxColumn
+    Friend WithEvents 说明 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents 工艺制作 As DataGridViewTextBoxColumn
     Friend WithEvents 工艺时间记录 As DataGridViewTextBoxColumn
+    Friend WithEvents SF订单号 As DataGridViewTextBoxColumn
     Friend WithEvents DWGInfo As DataGridViewTextBoxColumn
     Friend WithEvents CustDWG As DataGridViewTextBoxColumn
     Friend WithEvents DrawNo As DataGridViewTextBoxColumn
     Friend WithEvents Qty As DataGridViewTextBoxColumn
     Friend WithEvents CustCode As DataGridViewTextBoxColumn
-    Friend WithEvents 说明 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
