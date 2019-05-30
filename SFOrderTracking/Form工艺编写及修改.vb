@@ -33,7 +33,7 @@
             Dim rs As New ADODB.Recordset
             'Dim SQLstring As String
             Dim SQLstring, DWGinfo As String
-            DWGinfo = DataGridView1.Item(2, e.RowIndex).Value
+            DWGinfo = DataGridView1.Item(3, e.RowIndex).Value
             cn.Open(CNsfmdb)
             SQLstring = "Select * From ProcCard where DWGInfo=N'" & DWGinfo & "' order by ProcSN"
             'rs.Open(SQLstring, cn, 1, 2)
