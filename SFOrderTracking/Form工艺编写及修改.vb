@@ -1,4 +1,4 @@
-﻿Public Class Form工艺编写
+﻿Public Class Form工艺编写及修改
     Private Sub Form11_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Form主窗体.Show()
     End Sub
@@ -254,7 +254,7 @@
             cn.Open(CNsfmdb)
 
             '88888888888888888888888888888888 对应图号工艺列表 88888888888888888888888888888888888888888888888888888888888888888888888888
-            SQLstring = "Select ProcMaker ,ProcDate, DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo=N'" & TextBox_参考图号.Text & "' group by ProcMaker,ProcDate,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
+            SQLstring = "Select ProcMaker ,ProcDate, SFOrder,DWGInfo,CustDWG,DrawNo,Qty,CustCode From ProcCard where DrawNo like N'%" & TextBox_参考图号.Text & "%' group by ProcMaker,ProcDate,SFOrder,DWGInfo,CustDWG,DrawNo,Qty,CustCode order by DWGInfo,CustDWG,DrawNo,Qty,CustCode"
             DataGridView1.Rows.Clear()
             DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 

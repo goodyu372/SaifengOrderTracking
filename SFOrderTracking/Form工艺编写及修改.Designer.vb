@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form工艺编写
+Partial Class Form工艺编写及修改
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

@@ -135,7 +135,7 @@
     End Sub
     Private Sub 工艺编制ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles 工艺编制ToolStripMenuItem1.Click
         Me.Hide()
-        Form工艺编写.Show()
+        Form工艺编写及修改.Show()
     End Sub
     Private Sub 打印工艺卡ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 打印工艺卡ToolStripMenuItem.Click
         Me.Hide()

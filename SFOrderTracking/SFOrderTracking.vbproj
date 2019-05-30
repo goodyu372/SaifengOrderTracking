@@ -189,10 +189,10 @@
     <Compile Include="Form图纸信息工艺卡.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form工艺编写.Designer.vb">
-      <DependentUpon>Form工艺编写.vb</DependentUpon>
+    <Compile Include="Form工艺编写及修改.Designer.vb">
+      <DependentUpon>Form工艺编写及修改.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form工艺编写.vb">
+    <Compile Include="Form工艺编写及修改.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form输入生产单.Designer.vb">
@@ -691,8 +691,8 @@
       <DependentUpon>Form图纸信息工艺卡.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form工艺编写.resx">
-      <DependentUpon>Form工艺编写.vb</DependentUpon>
+    <EmbeddedResource Include="Form工艺编写及修改.resx">
+      <DependentUpon>Form工艺编写及修改.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form输入生产单.resx">
       <DependentUpon>Form输入生产单.vb</DependentUpon>

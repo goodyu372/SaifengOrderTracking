@@ -308,14 +308,14 @@ Partial Class Form主窗体
         '用户查询ToolStripMenuItem
         '
         Me.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem"
-        Me.用户查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.用户查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.用户查询ToolStripMenuItem.Text = "用户查询"
         Me.用户查询ToolStripMenuItem.Visible = False
         '
         '增加用户ToolStripMenuItem
         '
         Me.增加用户ToolStripMenuItem.Name = "增加用户ToolStripMenuItem"
-        Me.增加用户ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.增加用户ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.增加用户ToolStripMenuItem.Text = "用户增加"
         Me.增加用户ToolStripMenuItem.Visible = False
         '
@@ -324,20 +324,20 @@ Partial Class Form主窗体
         Me.ProcessInputMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工艺编制ToolStripMenuItem1, Me.打印工艺卡ToolStripMenuItem1})
         Me.ProcessInputMenuItem.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ProcessInputMenuItem.Name = "ProcessInputMenuItem"
-        Me.ProcessInputMenuItem.Size = New System.Drawing.Size(86, 25)
-        Me.ProcessInputMenuItem.Text = "工艺编制"
+        Me.ProcessInputMenuItem.Size = New System.Drawing.Size(134, 25)
+        Me.ProcessInputMenuItem.Text = "工艺编制及修改"
         Me.ProcessInputMenuItem.Visible = False
         '
         '工艺编制ToolStripMenuItem1
         '
         Me.工艺编制ToolStripMenuItem1.Name = "工艺编制ToolStripMenuItem1"
-        Me.工艺编制ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
-        Me.工艺编制ToolStripMenuItem1.Text = "工艺编制"
+        Me.工艺编制ToolStripMenuItem1.Size = New System.Drawing.Size(192, 26)
+        Me.工艺编制ToolStripMenuItem1.Text = "工艺编制及修改"
         '
         '打印工艺卡ToolStripMenuItem1
         '
         Me.打印工艺卡ToolStripMenuItem1.Name = "打印工艺卡ToolStripMenuItem1"
-        Me.打印工艺卡ToolStripMenuItem1.Size = New System.Drawing.Size(180, 26)
+        Me.打印工艺卡ToolStripMenuItem1.Size = New System.Drawing.Size(192, 26)
         Me.打印工艺卡ToolStripMenuItem1.Text = "打印工艺卡"
         '
         'ToolStripMenuItem1
@@ -351,13 +351,13 @@ Partial Class Form主窗体
         '分类查询ToolStripMenuItem
         '
         Me.分类查询ToolStripMenuItem.Name = "分类查询ToolStripMenuItem"
-        Me.分类查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.分类查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.分类查询ToolStripMenuItem.Text = "分类查询"
         '
         '全部查询ToolStripMenuItem
         '
         Me.全部查询ToolStripMenuItem.Name = "全部查询ToolStripMenuItem"
-        Me.全部查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.全部查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.全部查询ToolStripMenuItem.Text = "全部查询"
         Me.全部查询ToolStripMenuItem.Visible = False
         '
@@ -619,19 +619,19 @@ Partial Class Form主窗体
         '返工记录输入ToolStripMenuItem
         '
         Me.返工记录输入ToolStripMenuItem.Name = "返工记录输入ToolStripMenuItem"
-        Me.返工记录输入ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.返工记录输入ToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.返工记录输入ToolStripMenuItem.Text = "返工记录输入"
         '
         '返工收回QAToolStripMenuItem
         '
         Me.返工收回QAToolStripMenuItem.Name = "返工收回QAToolStripMenuItem"
-        Me.返工收回QAToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.返工收回QAToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.返工收回QAToolStripMenuItem.Text = "返工收回QA"
         '
         '查询返工记录ToolStripMenuItem
         '
         Me.查询返工记录ToolStripMenuItem.Name = "查询返工记录ToolStripMenuItem"
-        Me.查询返工记录ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.查询返工记录ToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.查询返工记录ToolStripMenuItem.Text = "查询返工记录"
         '
         '工时查询ToolStripMenuItem
