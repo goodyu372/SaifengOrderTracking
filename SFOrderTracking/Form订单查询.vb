@@ -75,7 +75,6 @@
         GroupBox1.Visible = False
         Label1.Text = "按生产单号查询零件状况"
         Label2.Text = "请输入生产单号："
-        QueryText = "Select * from NoProcCardList"
         TextBox1.Clear()
         TextBox1.Focus()
         QueryCase = "ByOrderBase"
