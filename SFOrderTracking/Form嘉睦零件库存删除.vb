@@ -59,7 +59,7 @@
             Dim rs As New ADODB.Recordset
             Dim SQLstring As String
             cn.Open(CNsfmdb)
-            'SQLstring = "Delete * from JamuStock where 编号=" & "'" & DataGridView1.Item("编号", e.RowIndex).Value & "'"
+            'SQLstring = $"Delete * from JamuStock where 编号='{DataGridView1.Item("编号", e.RowIndex).Value}' and 图号='{DataGridView1.Item("图号", e.RowIndex).Value}'"
             SQLstring = $"Delete JamuStock where ID={ID}"
             rs.Open(SQLstring, cn, 1, 3)
             cn.Close()

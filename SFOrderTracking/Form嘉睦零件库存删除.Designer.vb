@@ -34,11 +34,11 @@ Partial Class Form嘉睦零件库存删除
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("宋体", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(212, 63)
+        Me.Label2.Location = New System.Drawing.Point(43, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(370, 19)
+        Me.Label2.Size = New System.Drawing.Size(617, 38)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "从下表中选取要删除的编号然后双击删除："
+        Me.Label2.Text = "从下表中选取要删除的编号然后双击文字内容删除：注意只删除该行！！" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "并不是【删除该图号该编号的所有行】！！"
         '
         'Label1
         '
@@ -64,11 +64,11 @@ Partial Class Form嘉睦零件库存删除
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 85)
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 104)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 23
-        Me.DataGridView1.Size = New System.Drawing.Size(682, 310)
+        Me.DataGridView1.Size = New System.Drawing.Size(682, 291)
         Me.DataGridView1.TabIndex = 4
         '
         'Form嘉睦零件库存删除
