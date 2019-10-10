@@ -11,9 +11,9 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("WindowsApplication1")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("WindowsApplication1")> 
-<Assembly: AssemblyCopyright("Copyright ©  2017")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyProduct("WindowsApplication1")>
+<Assembly: AssemblyCopyright("Copyright ©sf  2019")>
+<Assembly: AssemblyTrademark("sf")>
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.3.7")>
-<Assembly: AssemblyFileVersion("1.0.3.7")>
+<Assembly: AssemblyVersion("1.0.3.8")>
+<Assembly: AssemblyFileVersion("1.0.3.8")>

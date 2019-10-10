@@ -97,7 +97,7 @@
             rs.Fields("图号").Value = DataGridView1.Item("图号", i).Value
             rs.Fields("数量").Value = DataGridView1.Item("数量", i).Value
             rs.Fields("编号").Value = DataGridView1.Item("编号", i).Value
-            'rs.Fields("入库日期").Value = Now
+            rs.Fields("入库日期").Value = Now.Date
             rs.Update()
         Next
         rs.Close()
