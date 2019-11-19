@@ -125,6 +125,22 @@
                 Exit Sub
             End If
         Next
+        '检查是否有单价
+        SQLstring = $"Select * From CustList where CustCode='{TextBox2.Text}'"
+        rs.Open(SQLstring, cn, 1, 3)
+        Dim b As Boolean
+        b = rs.Fields("要求有单价才能下生产单").Value
+        rs.Close()
+        If b Then
+            For i = 2 To xlsheet.UsedRange.Rows.Count
+                If (xlsheet.Cells(i, 6).value = Nothing) Or (CStr(xlsheet.Cells(i, 6).value) = "") Or (CType(xlsheet.Cells(i, 6).value, Double) <= 0) Then
+                    MsgBox("该客户必须要求有单价才能下生产单！，请检查！")
+                    Exit Sub
+                Else
+
+                End If
+            Next
+        End If
         '******************************************* 输入订单内容 **********************************************************************
         Dim ID As Integer
         'List down the SFOrder
