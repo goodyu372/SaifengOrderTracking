@@ -4,7 +4,7 @@
     'Public CNsfmdb = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Password=czlee859288;Initial Catalog=SFOrderBase;Server =\\192.168.0.186;Data Source=ERP\SAIFENGDB"
     'Public CNsfmdb = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Password=czlee859288;Initial Catalog=SFAll;Server =\\192.168.0.186;Data Source=ERP\SAIFENGDB"
     Public CNsfmdb = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Password=123;Initial Catalog=SFAll;Server =\\192.168.0.76;Data Source=SF"
-    Public erpBasePath = "\\192.168.0.76\【可执行文件共享】\ERP Data"
+    Public erpBasePath = "\\192.168.0.76\【可执行文件共享】\ERP"
     Public PrintCard = erpBasePath + "\Data\NewPrintCard.xlsx"  '赛峰工艺卡打印模板
     Public TempDataPath = "D:\TempData\"  '用户本地计算机D盘存放一些临时文件的目录'
     Public DWGPath = erpBasePath + "\sfData\DWG\"  'DWG等图纸文件存放本机的路径'
