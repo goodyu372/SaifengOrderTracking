@@ -165,6 +165,7 @@ Partial Class Form主窗体
         '
         '输入生产单ToolStripMenuItem
         '
+        Me.输入生产单ToolStripMenuItem.Enabled = False
         Me.输入生产单ToolStripMenuItem.Name = "输入生产单ToolStripMenuItem"
         Me.输入生产单ToolStripMenuItem.Size = New System.Drawing.Size(240, 26)
         Me.输入生产单ToolStripMenuItem.Text = "输入生产单"
@@ -308,14 +309,14 @@ Partial Class Form主窗体
         '用户查询ToolStripMenuItem
         '
         Me.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem"
-        Me.用户查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.用户查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.用户查询ToolStripMenuItem.Text = "用户查询"
         Me.用户查询ToolStripMenuItem.Visible = False
         '
         '增加用户ToolStripMenuItem
         '
         Me.增加用户ToolStripMenuItem.Name = "增加用户ToolStripMenuItem"
-        Me.增加用户ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.增加用户ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.增加用户ToolStripMenuItem.Text = "用户增加"
         Me.增加用户ToolStripMenuItem.Visible = False
         '
@@ -351,13 +352,13 @@ Partial Class Form主窗体
         '分类查询ToolStripMenuItem
         '
         Me.分类查询ToolStripMenuItem.Name = "分类查询ToolStripMenuItem"
-        Me.分类查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.分类查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.分类查询ToolStripMenuItem.Text = "分类查询"
         '
         '全部查询ToolStripMenuItem
         '
         Me.全部查询ToolStripMenuItem.Name = "全部查询ToolStripMenuItem"
-        Me.全部查询ToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.全部查询ToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.全部查询ToolStripMenuItem.Text = "全部查询"
         Me.全部查询ToolStripMenuItem.Visible = False
         '
