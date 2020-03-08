@@ -1,7 +1,5 @@
 ﻿Public Class Form嘉睦零件库存管理
-    Public ss As New Microsoft.Office.Interop.Excel.Application
-    Public xlsheet As Microsoft.Office.Interop.Excel.Worksheet
-    Public xlbook As Microsoft.Office.Interop.Excel.Workbook
+
     Public SelectDelete As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim cn As New ADODB.Connection
